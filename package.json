@@ -1,0 +1,32 @@
+{
+  "name": "suburbiacredito",
+  "version": "1.0.0",
+  "description": "This project is about Suburbia Crédito, all sections will be developed here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/cesar8803/Suburbia-Credito", 
+  },
+  "author": "Liverpool",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.2.0",
+    "gulp-minify": "0.0.15",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.7.0"
+  },
+  "dependencies": {
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-stylus": "^2.6.0"
+  }
+}
