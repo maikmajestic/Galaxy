@@ -1,9 +1,9 @@
-.container-fluid {
-  background: url("../images/background.jpg");
-  background-position: cover;
-  min-width: 100%;
-  min-height: 100%;
+body {
+  background-color: #000;
 }
 img {
   width: 100%;
+}
+.item:hover {
+  cursor: pointer;
 }
