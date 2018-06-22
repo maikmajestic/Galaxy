@@ -1,4 +1,7 @@
 body {
+  background: url("../images/Fondo1.jpg") no-repeat center center fixed;
+  -moz-background-size: cover;
+       background-size: cover;
   background-color: #000;
   min-height: 100%;
 }
@@ -42,4 +45,11 @@ img {
 .cometa {
   -moz-transform: scale(0.3);
        transform: scale(0.3);
+}
+.m32_info {
+  display: none;
+  left: 15em;
+  top: 12em;
+  -moz-transform: none;
+       transform: none;
 }
