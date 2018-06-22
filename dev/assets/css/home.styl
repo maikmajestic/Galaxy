@@ -1,6 +1,6 @@
 body
-	//background url('../images/background.gif') no-repeat center center fixed
-	//background-size cover
+	background url('../images/background.gif') no-repeat center center fixed
+	background-size cover
 	background-color #000
 	min-height 100%
 img
@@ -27,7 +27,53 @@ img
 	left 37em
 .m80
 	top 10em
+.m80-info-wrapper
+	max-height 100%
+	top 11em
+	left 14em
+	position absolute
+	width 100%
+	h4, p
+		color #66A8DE
+		margin-top 35px
+		z-index 1000
+		position absolute
+		margin-left 40px
+		font-size 1em
+	p
+		color #7FDFFD
+		font-size 0.5em
+		margin-top 58px
+		margin-right 45px
+		margin-left 45px
 .m32
 	top 10em
 .cometa
 	transform scale(0.3)
+
+
+//typewritter
+
+.typewriter h4 {
+	color: #66A8DE;
+	font-family: monospace;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid orange; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: 
+		typing 3.5s steps(30, end),
+		blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange }
+}
