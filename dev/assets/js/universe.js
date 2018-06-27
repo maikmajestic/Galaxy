@@ -1,3 +1,5 @@
+
+
 // set up text to print, each item in array is new line
 var aText = new Array(
 "En 1950 Guillermo Haro descubrió un nuevo tipo de nebulosas cósmicas con un espectro muy peculiar al analizar placas fotográficas obtenidas con la cámara Schmidt del observatorio de Tonantzintla. Estas nebulosas se forman por la interacción entre el gas expulsado por la estrella central con nubes de material gaseoso y polvo interestelar colisionando a velocidades de varios cientos de kilómetros por segundo ionizando el gas. El resultado son unos objetos muy brillantes y vistosos de muy corta vida (unos cuantos miles de años) y conocidos como Objetos Herbig-Haro. "
@@ -11,7 +13,7 @@ var iTextPos = 0; // initialise text position
 var sContents = ''; // initialise contents variable
 var iRow; // initialise current row
  
-function typewriter()
+function typewriterm80()
 {
  sContents =  ' ';
  iRow = Math.max(0, iIndex-iScrollAt);
@@ -26,12 +28,20 @@ function typewriter()
   iIndex++;
   if ( iIndex != aText.length ) {
    iArrLength = aText[iIndex].length;
-   setTimeout("typewriter()", 500);
+   setTimeout("typewriterm80()", 500);
   }
  } else {
-  setTimeout("typewriter()", iSpeed);
+  setTimeout("typewriterm80()", iSpeed);
  }
 }
 
-
-typewriter();
+function m80(){
+	var x = document.getElementsByClassName("m80-info-wrapper");
+	console.log(x[0].style.display);
+    if (x[0].style.display == "none") {
+        x[0].style.display = "block";
+        typewriterm80();
+    } else {
+        x[0].style.display = "none";
+    }
+}

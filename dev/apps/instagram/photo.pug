@@ -1,0 +1,67 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        h4.title-insta Foto
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="profile.html")
+            img(src="../../assets/images/instagram/cardiologia/DSC03164.jpg")
+        .col-9
+          a(href="profile.html")
+            h3.name-profile-photo Cardiología
+              span · Siguiendo
+          h3.location-profile Ciudad de México
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/cardiologia/DSC00104.JPG")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 782 
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link Ana Rivera
+              span El Dr. Chávez tuvo la firme convicción de que era necesario crear un instituto que impartiera asistencia médica de alta calidad científica con calor humano, dirigida a una población económicamente débil. Bajo esta mentalidad es fundado el Instituto Nacional de Cardiología el 18 de abril de 1944, ubicándose en la Av. Cuauhtémoc, en la Ciudad de México
+          .item-comment-wrapper
+            h4.profile-name-link Ramón Cervantes
+              span Después de 32 años de funcionamiento se muda a las instalaciones actuales, en la zona de Tlalpan, el 17 de octubre de 1976. Desde su fundación el Instituto ha atendido a miles de pacientes con padecimientos cardiovasculares, renales y reumáticos bajo el lema: “El amor y la ciencia al servicio del corazón”. 
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

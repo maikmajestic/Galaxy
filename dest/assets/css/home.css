@@ -40,6 +40,7 @@ img {
   top: 10em;
 }
 .m80-info-wrapper {
+  display: none;
   max-height: 100%;
   top: 11em;
   left: 14em;
@@ -86,7 +87,7 @@ img {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 20%;
   }
 }
 @keyframes typing {
@@ -94,7 +95,7 @@ img {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 20%;
   }
 }
 @-moz-keyframes blink-caret {

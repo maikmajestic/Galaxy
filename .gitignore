@@ -63,3 +63,5 @@ dest
 package-lock.json
 package.json
 README.md
+
+*.mov

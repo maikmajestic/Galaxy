@@ -3,13 +3,14 @@ html
 		meta(name="viewport" content="width=device-width")
 		link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
 		link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+		link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
 		link(rel="stylesheet" type="text/css" href="../../assets/css/home.css")
 	body
 		.container-fluid
 			.row
 				.col-2
-					img.item.m80(src="../../assets/images/GALAXIAM8015FRAMES.gif")
-					div.m80-info-wrapper.typewriter
+					img.item.m80#m80-element(src="../../assets/images/GALAXIAM8015FRAMES.gif", onclick="m80()")
+					div.m80-info-wrapper.typewriter.animated.pulse(style="display:none")
 						img.item.m80-info(src="../../assets/images/resource.png")
 						h4 Cometa
 						p#typedtext
