@@ -41,6 +41,7 @@ gulp.task('stylus',function(){
 gulp.task('transportOthersFiles', [], function() {
 	console.log("Moving others files From dev/ to dest/ folder");
 	gulp.src(['dev/assets/*lib/**','dev/assets/*js/**','dev/assets/*css/fonts/**','dev/assets/*images/**']).pipe(gulp.dest('dest/assets/'));
+	gulp.src(['dev/assets/videos/**'], { base: './dev/assets/videos/' }).pipe(gulp.dest('dest/assets/videos/'));
 });
 
 gulp.task('watch', function () {

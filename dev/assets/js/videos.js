@@ -18,7 +18,7 @@ $(function() {
     }
   });
   $('.card').on('click', function() {
-    var src = $(this).attr("data-src");
+    var src = "../../" + $(this).attr("data-src");
     var description = $(this).attr("data-description");
     var title = $(this).attr("data-title");
     var subtitle = $(this).attr("data-subtitle");
