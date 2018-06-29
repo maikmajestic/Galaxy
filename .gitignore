@@ -58,7 +58,7 @@ typings/
 .env
 
 # pugs&stylus compile
-dist
+dest
 *.html
 package-lock.json
 package.json
