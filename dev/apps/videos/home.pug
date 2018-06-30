@@ -1,0 +1,56 @@
+doctype html
+html(lang="es")
+	head
+		include ./commons/head-default.pug
+		link(rel="stylesheet" type="text/css" href="../../assets/lib/owlCarousel-2.3.4/assets/owl.carousel.min.css")
+	body
+		.container-fluid
+			.row.videoDetails
+				.col-12.col-lg-5.pt-5.wrap-details
+					h2.title-source Colegio Nacional
+					p.subtitle-source Leopoldo
+					.row
+						.col-6
+							button.p-2.play(type="button" data-toggle="modal" data-target=".video-modal") #[i.fas.fa-play] #[span Reproducir]
+					p.description-source Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit. Lorem ipsum dolor sit.
+				.col-12.col-lg-7.pt-5.wrap-video
+					video.myVideo(autoplay="" muted="" loop="")
+						source.video-source(src="../../assets/videos/rain.mp4" type="video/mp4")
+					.wrap-shadow
+			.row
+				.owl-carousel.owl-theme
+					.item
+						.card(data-src="assets/videos/nike.mp4" data-description="NIKE LOREM IPSUM DOLOR SITNIKE LOREM IPSUM DOLOR SITNIKE LOREM IPSUM DOLOR SITNIKE LOREM IPSUM DOLOR SITNIKE LOREM IPSUM DOLOR SIT" data-title="NIKE" data-subtitle="HOLA QUE HACE ?")
+							img.card-img-top(src='http://bloghorror.com/wp-content/uploads/2018/02/Halloween-2018-las-peliculas-de-terror-2018-mas-esperadas.jpg' alt="")
+							.card-body
+								h5.card-title Movie Title
+					.item
+						.card(data-src="assets/videos/wow.mp4" data-description="WOW LOREM IPSUM DOLOR SIT WOW LOREM IPSUM DOLOR SIT WOW LOREM IPSUM DOLOR SIT WOW LOREM IPSUM DOLOR SIT WOW LOREM IPSUM DOLOR SIT" data-title="WOW" data-subtitle="HOLA QUE HACE ?")
+							img.card-img-top(src='http://bloghorror.com/wp-content/uploads/2018/02/Halloween-2018-las-peliculas-de-terror-2018-mas-esperadas.jpg' alt="")
+							.card-body
+								h5.card-title Movie Title
+					.item
+						.card(data-src="assets/videos/hots.mp4" data-description="HOTS LOREM IPSUM DOLOR SIT HOTS LOREM IPSUM DOLOR SIT HOTS LOREM IPSUM DOLOR SIT HOTS LOREM IPSUM DOLOR SIT HOTS LOREM IPSUM DOLOR SIT" data-title="HOTS" data-subtitle="HOLA QUE HACE ?")
+							img.card-img-top(src='http://bloghorror.com/wp-content/uploads/2018/02/Halloween-2018-las-peliculas-de-terror-2018-mas-esperadas.jpg' alt="")
+							.card-body
+								h5.card-title Movie Title
+					.item
+						.card(data-src="assets/videos/sc2.mp4" data-description="SC2 LOREM IPSUM DOLOR SIT SC2 LOREM IPSUM DOLOR SIT SC2 LOREM IPSUM DOLOR SIT SC2 LOREM IPSUM DOLOR SIT SC2 LOREM IPSUM DOLOR SIT" data-title="SC2" data-subtitle="HOLA QUE HACE ?")
+							img.card-img-top(src='http://bloghorror.com/wp-content/uploads/2018/02/Halloween-2018-las-peliculas-de-terror-2018-mas-esperadas.jpg' alt="")
+							.card-body
+								h5.card-title Movie Title
+		.modal.fade.video-modal(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true')
+			.modal-dialog
+				.modal-content
+					.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+					.moda-body
+						video.myModalVideo(controls)
+							source.video-source(src="../../assets/videos/sc2.mp4" type="video/mp4")
+					//-.embed-responsive.embed-responsive-16by9
+						iframe.embed-responsive-item(src='')
+		script(type="text/javascript" src="../../assets/lib/jquery-3.2.1.min.js")
+		script(type="text/javascript" src="../../assets/lib/owlCarousel-2.3.4/owl.carousel.min.js")
+		script(type="text/javascript" src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js")
+		script(type="text/javascript" src="../../assets/js/videos.js")
