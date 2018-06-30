@@ -1,0 +1,67 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        h4.title-insta Foto
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="profile_nutricion.html")
+            img(src="../../assets/images/instagram/nutricion/fachada.jpg")
+        .col-9
+          a(href="profile_nutricion.html")
+            h3.name-profile-photo ciencias_medicas
+              span · Siguiendo
+          h3.location-profile Ciudad de México
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/nutricion/inn2.jpg")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 8.2k
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link javier_durán
+              span En 1966, Donato Alarcón Segovia, fundaría el Departamento de Genética, Inmunología y Reumatología en el instituto y fue su director general de 1992 al 2002.  Fue aquí en 1983 donde se diagnosticó del primer caso de VIH SIDA en el país y se construye el Centro de Referencia para la atención e investigación de este síndrome
+          .item-comment-wrapper
+            h4.profile-name-link maria_suárez
+              span El INCMNSZ fue concebido desde sus orígenes como una instancia de respuesta especializada a las necesidades de salud de la población en materia de nutrición y medicina interna. En la actualidad, se centra en desarrollar conocimiento de alta especialidad a través de la investigación, la cual, a su vez, se traduce en la formación de recursos humanos en salud y se aplica en la asistencia médica.
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

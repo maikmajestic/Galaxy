@@ -3,6 +3,7 @@ body
 .main-quiz
 	background url('../images/quiz/deepred_BG.png') no-repeat center center fixed
 	background-size cover
+	padding-top 50%
 	min-height 100%
 .quote-wrapper
 	background url("../images/quiz/Twitter-BG.png")
@@ -26,9 +27,14 @@ body
 	i
 		display none
 .option-wrap.active
-		background #8EAC1E
-		color #fff
+	background #8EAC1E
+	color #fff
 	i
+		display block
+.option-wrap.error
+	background #f00
+	i
+		color #fff
 		display block
 .icon-option
 	font-size 15px
@@ -41,10 +47,13 @@ body
 	font-size 1em
 	margin 0 auto
 	padding 10px
-	width 70%
+	width 100%
 	h4
 		font-size 1.4em
 .riddle-text
 	font-size 2em
 .title-book
 	color #FD866A
+.info-quote
+	color #fff
+	display none

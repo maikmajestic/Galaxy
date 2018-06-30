@@ -40,11 +40,21 @@ function m80(){
 	console.log(x[0].style.display);
     if (x[0].style.display == "none") {
         x[0].style.display = "block";
-        typewriterm80();
     } else {
         x[0].style.display = "none";
     }
 }
+<<<<<<< HEAD
+function h11(){
+  var y = document.getElementsByClassName("lele-info-wrapper");
+  console.log(y[0].style.display);
+    if (y[0].style.display == "none") {
+        y[0].style.display = "block";
+    } else {
+        y[0].style.display = "none";
+    }
+}
+=======
 */
 
 $('.object').on('click', function(){

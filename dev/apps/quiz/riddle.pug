@@ -11,21 +11,23 @@ html
   body
     .container-fluid.main-quiz
       .row.align-items-center.justify-content-center.pt-5
-        .col-6.col-offset-3.text-center
+        .col-8.col-offset-2.text-center
           h4.text-white.riddle-text "Pueblo imaginario lleno de voces, prejuicios y religión".
       .row.align-items-center.justify-content-center
-        .col-4.option-riddle.text-center
-          img(src="../../assets/images/quiz/escritores/AgustinYanez.png")
+        .col-4.option-riddle.text-center#pos1
+          img(src="")
           .info-writter.text-white
             h4.title-writter Agustín Yañez
             h4.title-book Al filo del agua
-        .col-4.option-riddle.text-center
-          img(src="../../assets/images/quiz/escritores/AgustinYanez.png")
+        .col-4.option-riddle.text-center#pos2
+          img(src="")
           .info-writter.text-white
             h4.title-writter Agustín Yañez
             h4.title-book Al filo del agua
-        .col-4.option-riddle.text-center
-          img(src="../../assets/images/quiz/escritores/AgustinYanez.png")
+        .col-4.option-riddle.text-center#pos3
+          img(src="")
           .info-writter.text-white
             h4.title-writter Agustín Yañez
             h4.title-book Al filo del agua
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/riddle.js')
