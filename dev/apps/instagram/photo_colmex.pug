@@ -1,0 +1,67 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        h4.title-insta Foto
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="profile_colmex.html")
+            img(src="../../assets/images/instagram/colmex/Colmex-Ajusco3.jpg")
+        .col-9
+          a(href="profile_colmex.html")
+            h3.name-profile-photo col_mex
+              span · Siguiendo
+          h3.location-profile Ciudad de México
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/colmex/Colmex-Ajusco3.jpg")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 6k
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link erick_torres
+              span Los primeros veinte años la institución residió en unos despachos en la sede del Fondo de Cultura Económica, dirigido entonces por Cosío Villegas; después pasó de una casa alquilada a otra, hasta que logró tener un edificio propio al comenzar la década de 1960. En 1976 Víctor Urquidi, presidente de El Colegio de México en esos momentos, supervisó la inauguración del moderno edificio en el cual reside actualmente, siendo uno de sus arquitectos Teodoro González de León. 
+          .item-comment-wrapper
+            h4.profile-name-link caro_hdz
+              span El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior en ciencias sociales y humanidades. Desde su comienzo ha mantenido de forma ininterrumpida sus labores, convirtiéndose en uno de los centros de investigación y docencia más destacados en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos. Actualmente cuenta con la biblioteca más importante de México en humanidades y ciencias sociales, la cual es considerada el centro neurálgico de la institución.
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')
