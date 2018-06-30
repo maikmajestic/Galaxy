@@ -1,4 +1,4 @@
-
+/*
 
 // set up text to print, each item in array is new line
 var aText = new Array(
@@ -45,3 +45,10 @@ function m80(){
         x[0].style.display = "none";
     }
 }
+*/
+
+$('.object').on('click', function(){
+  console.log("ola k ase ?");
+  var description = $('.description-wrap', this);
+  description.show();
+});
