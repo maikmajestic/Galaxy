@@ -48,7 +48,7 @@ function m80(){
 */
 
 $('.object').on('click', function(){
-  console.log("ola k ase ?");
   var description = $('.description-wrap', this);
+  $('.description-wrap').hide();
   description.show();
 });
