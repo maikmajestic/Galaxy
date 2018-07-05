@@ -4,31 +4,48 @@ body
 	background-color #000
 	min-height 100%
 .object
+	user-select none
 	position absolute
 	width 35%
 	.image
-		position relative
-		float left
-		overflow hidden
-		width 50%
-		cursor pointer
+		position absolute
+		width 40%
+		padding 40px 10px 25px 10px
 		img
-			width 70%
+			width 100%
+			cursor pointer
 	.description-wrap
+		background-image url("../images/neon-sign2.png")
+		background-position center top
+		background-size 118% 100%
+		background-repeat no-repeat
 		display none
 		position absolute
-		float left
 		overflow hidden
 		z-index 100
-		margin 0 0 0 15em
-		width 55%
-		background-color rgba(0,0,0,0.4)
-		padding 10px
+		margin 0 0 0 17em
+		width 60%
+		padding 40px 10px 25px 10px
 		h4
 			color #66A8DE
 		p
 			color #7FDFFD
 			font-size 12px
+.avoid-clicks
+	pointer-events none
+.video-bg
+	position fixed
+	top 0
+	right 0
+	width auto
+	min-width 100%
+	height auto
+	min-height 100%
+	z-index -100
+	background transparent url("../videos/universe.mov")
+	background-size cover
+video
+	display block
 .cometa
 	.image
 		img
@@ -36,6 +53,11 @@ body
 			width 33%
 	.description-wrap
 		margin 0 0 0 10em
+.spaceship
+	opacity 0.8
+	.image
+		img
+			width 45%
 /*
 .haro11
 	top 20em
