@@ -1,5 +1,49 @@
 $( document ).ready(function() {
 
+	if(localStorage.answersS){
+		if(localStorage.answersS == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersS == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersS == 3){
+    		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersS", 0);
+    	}
+	}
+	else{
+		localStorage.setItem("answersS", 0);
+	}
+
+	function checkAnswers(answersS){
+		if(answersS <= 0){
+			answersS = 0;
+			localStorage.setItem("answersS", 0);
+		}
+		else if(answersS == 3){
+			answersS = 0;
+			localStorage.setItem("answersS", 3);
+			var code = Math.floor(Math.random() * 101);
+			$('.code-price').text('PLURAL-2018-'+code);
+			$('#price').toggle('modal');
+			$('body').css('pointer-events', 'none');
+			setTimeout(function(){ location.reload(true) }, 20000);
+			localStorage.setItem("answersS", 0);
+		}
+		else if(answersS > 3){
+			answersS = 0;
+			localStorage.setItem("answersS", 0);
+		}
+		else{
+			answersS = answersS;
+			localStorage.setItem("answersS", answersS);
+		}
+	}
+
 	$('.go-back').on('click', function(){
 		window.location.href = "index.html";
 	});
@@ -89,7 +133,23 @@ $( document ).ready(function() {
 	$('.option-riddle').on('click', function(){
 		var option = $(this).data('option');
 		console.log(option);
+		var answersS = parseInt(localStorage.getItem("answersS"));
 		if(option == opt){
+			answersS=answersS+1;
+			checkAnswers(answersS);
+    	console.log(localStorage.answersS);
+    	if(localStorage.answersS == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersS == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersS == 3){
+    		$('.answers-result i').addClass('active');
+    	}
 				$(this).addClass('active');
 				$(this).append('<h3 class="text-white">Respuesta correcta</h3>');
 				$('.option-riddle').css('pointer-events', 'none');
@@ -98,6 +158,22 @@ $( document ).ready(function() {
 				setTimeout(function(){ location.reload(true) }, 15000);
 		}
 		else{
+			answersS=answersS-1;
+			checkAnswers(answersS);
+    	console.log(localStorage.answersS);
+    	if(localStorage.answersS == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersS == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersS == 3){
+    		$('.answers-result i').addClass('active');
+    		$('#price').toggle('modal');
+    	}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check-circle');
 			$(this).find('i').addClass('fa-times');

@@ -1,6 +1,48 @@
 $( document ).ready(function() {
 
-	document.cookie = "answers=0";
+	if(localStorage.answersQ){
+		if(localStorage.answersQ == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersQ == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersQ == 3){
+    		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersQ", 0);
+    	}
+	}
+	else{
+		localStorage.setItem("answersQ", 0);
+	}
+
+	function checkAnswers(answersQ){
+		if(answersQ <= 0){
+			answersQ = 0;
+			localStorage.setItem("answersQ", 0);
+		}
+		else if(answersQ == 3){
+			answersQ = 0;
+			localStorage.setItem("answersQ", 3);
+			var code = Math.floor(Math.random() * 101);
+			$('.code-price').text('PLURAL-2018-'+code);
+			$('#price').toggle('modal');
+			$('body').css('pointer-events', 'none');
+			setTimeout(function(){ location.reload(true) }, 20000);
+			localStorage.setItem("answersQ", 0);
+		}
+		else if(answersQ > 3){
+			answersQ = 0;
+			localStorage.setItem("answersQ", 0);
+		}
+		else{
+			answersQ = answersQ;
+			localStorage.setItem("answersQ", answersQ);
+		}
+	}
 
 	$('.go-back').on('click', function(){
 		window.location.href = "index.html";
@@ -96,11 +138,23 @@ $( document ).ready(function() {
 	var op = eval('success'+randgn);
 	$('.option-wrap').on('click', function(){
 		var option = $(this).data('option');
+		var answersQ = parseInt(localStorage.getItem("answersQ"));
 		if(option == op){
-				var checkAnswer = document.cookie;
-				checkAnswer= parseInt(checkAnswer)+1;
-				document.cookie = "answers="+checkAnswer;
-				console.log(document.cookie);
+			answersQ=answersQ+1;
+			checkAnswers(answersQ);
+    	console.log(localStorage.answersQ);
+    	if(localStorage.answersQ == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersQ == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersQ == 3){
+    		$('.answers-result i').addClass('active');
+    	}
 				$(this).addClass('active');
 				$('.option-wrap').css('pointer-events', 'none');
 				$('.btn-restart').show();
@@ -108,10 +162,21 @@ $( document ).ready(function() {
 				setTimeout(function(){ location.reload(true) }, 15000);
 		}
 		else{
-			var checkAnswer = document.cookie;
-				checkAnswer= parseInt(checkAnswer)-1;
-				document.cookie = "answers="+checkAnswer;
-				console.log(document.cookie);
+			answersQ=answersQ-1;
+			checkAnswers(answersQ);
+    	console.log(localStorage.answersQ);
+    	if(localStorage.answersQ == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersQ == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersQ == 3){
+    		$('.answers-result i').addClass('active');
+    	}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check');
 			$(this).find('i').addClass('fa-times');

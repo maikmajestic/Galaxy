@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-$(document).ready(function(){
-	$('.m32').on('click', function(){
-		$('.m32_info').toggle();
-	});
-});
-=======
-<<<<<<< HEAD
+
 /*
 
 // set up text to print, each item in array is new line
@@ -73,13 +66,6 @@ $('.object').on('click', function(){
   $('.description-wrap').hide();
   description.show();
 });*/
-$('.object').on('click', function(){
-  var description = $('.info-m80');
-  var line = $('.line', this);
-  line.fadeToggle( 'fast', 'linear' );
-  description.fadeToggle('slow', 'linear');
-});
-=======
 /*
 
 // set up text to print, each item in array is new line
@@ -170,5 +156,3 @@ $(function() {
     e.preventDefault();
   });
 });
->>>>>>> origin/crumor-branch
->>>>>>> crumor-branch

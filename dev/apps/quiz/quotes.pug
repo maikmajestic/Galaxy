@@ -15,7 +15,7 @@ html
           i.far.fa-arrow-alt-circle-left
           span Elegir otro juego
         .col-4
-        .col-4.answers-result.text-right.pr-5
+        .col-3.answers-result.pr-5
           i.fas.fa-check-circle
           i.fas.fa-check-circle
           i.fas.fa-check-circle
@@ -30,5 +30,11 @@ html
       .row.align-items-center.justify-content-center
         .col.text-center.restart-wrapper
           button.btn-restart Jugar de nuevo
+      #price.modal.fade.animated.flash(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-body.text-center
+              p.code-body Has acertado en 3 ocasiones y te has ganado un libro, copia el código y acude a canjearlo.
+              p.code-price
     script(src="../../assets/lib/jquery-3.2.1.min.js")
     script(src='../../assets/js/quiz.js')

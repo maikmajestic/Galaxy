@@ -3,7 +3,7 @@ body
 .main-quiz
 	background url('../images/quiz/deepred_BG.png') no-repeat center center fixed
 	background-size cover
-	padding-top 3%
+	padding-top 2%
 	min-height 100%
 #main-quotes
 	padding-top 10%
@@ -74,16 +74,17 @@ body
 	color #000
 	background rgba(255, 255, 255, .5)
 	border-radius 20px
+	display block
 	font-size 2em
 	font-weight bolder
 	margin 20px 0
 	padding 20px 15px
-	a
+	text-decoration none
+	&:after
 		color #000
+		text-decoration none
 .restart-wrapper
 	color #fff
-	position absolute
-	bottom 5%
 .btn-restart
 	background none
 	border 1px solid #fff
@@ -92,6 +93,7 @@ body
 	display none
 	font-family 'Dosis', sans-serif
 	font-size 25px
+	margin-top 20px
 	padding 5px 40px
 .go-back
 	opacity 0.9
@@ -103,6 +105,8 @@ body
 		bottom initial
 	.go-back
 		text-align right
+	.answers-result
+		padding-left 7%
 #start-screen
 	padding-top 16%
 .go-back
@@ -130,5 +134,5 @@ body
 	margin-top 25%
 	.modal-body
 		background #000
-		border 10px solid #fff
+		opacity 0.8
 		padding 50px

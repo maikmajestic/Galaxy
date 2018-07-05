@@ -9,9 +9,14 @@ html
     link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
     link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
   body
-    .container-fluid.main-instagram
+    .container-fluid.main-instagram#profile
       .row.align-items-center.header-instagram
-        h4.title-insta Perfil
+        .col-2.back-i.text-center
+          i.fas.fa-chevron-left
+        .col
+          h4.title-insta Foto
+        .col-2.text-center
+          i.fas.fa-undo
       .row.align-items-center.header-profile
         .col-3.img-profile
           img(src="../../assets/images/instagram/DSC00104.JPG")
