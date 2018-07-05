@@ -1,0 +1,68 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        h4.title-insta Foto
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="profile_psiq.html")
+            img(src="../../assets/images/instagram/psiquiatria/01Actual2.JPG")
+        .col-9
+          a(href="profile_psiq.html")
+            h3.name-profile-photo instituto_psquiatria
+              span · Siguiendo
+          h3.location-profile Ciudad de México
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/psiquiatria/01Actual2.JPG")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 5k
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link brenda_mtz
+              span Desde sus inicios se visualizó al Instituto Nacional de Psiquiatría como organismo enfocado en el estudio de desórdenes mentales. Fue concebido por su fundador como una institución capaz de transformar nuestra manera de entender la enfermedad mental a partir de la investigación, de la traducción de los hallazgos científicos en programas, en mejores prácticas para la prevención de la enfermedad, en la atención de las personas que enferman, en recomendaciones para las políticas públicas, así como también en la formación de profesionales de la salud mental.
+
+          .item-comment-wrapper
+            h4.profile-name-link omar_valdez
+              span Desde entonces, el instituto se ha enfocado en mejorar la salud mental de la población mexicana por medio de la investigación multidisciplinaria de excelencia, la atención médica especializada y la formación de recursos humanos en los principios de calidad y calidez.
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

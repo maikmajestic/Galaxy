@@ -1,0 +1,67 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        h4.title-insta Foto
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="profile_indre.html")
+            img(src="../../assets/images/instagram/indre/1.png")
+        .col-9
+          a(href="profile_indre.html")
+            h3.name-profile-photo iset
+              span · Siguiendo
+          h3.location-profile Ciudad de México
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/indre/1.png")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 3k
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link raul_garcia
+              span El Instituto inició actividades en 1938 y fue formalmente inaugurado el 18 de marzo de 1939, con motivo del primer aniversario de la expropiación petrolera, entonces con el Dr. Martínez Báez como director. El ISET marcó un parteaguas en la salud pública del país ya que, por primera vez, se incluyó a la investigación científica en el programa de labores del Departamento de Salubridad.
+          .item-comment-wrapper
+            h4.profile-name-link naye_gtz
+              span Dentro del campo de la parasitología el Dr. Martínez Báez estuvo particularmente interesado en la oncocercosis y en la helmintiasis endémica en el sur de México y el norte de América Central.
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

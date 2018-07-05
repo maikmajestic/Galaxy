@@ -1,0 +1,92 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram
+      .row.align-items-center.header-instagram
+        h4.title-insta Perfil
+      .row.align-items-center.header-profile
+        .col-3.img-profile
+          img(src="../../assets/images/instagram/DSC00104.JPG")
+        .col-9
+          a(href="photo.html")
+            h3.name-profile cardiologia
+              i.fas.fa-ellipsis-h
+          .row
+            .col-10
+              button.btn-follow Siguiendo
+            .col-2
+              button.btn-options
+                i.fas.fa-caret-down
+      .row.align-items-center.descrip-profile
+        .col-12
+          p.description
+            strong Instituto Nacional de Cardiología
+            | Después de la Revolución Mexicana surgió en el país una nueva mentalidad, la cual se vio reflejada directamente en la medicina. El primer departamento de especialidad médica en nacer fue el de Cardiología, el cual fue encomendado, desde su primer servicio en 1924, al Dr. Ignacio Chávez. 
+          p.followers-names daniel_juarez 
+            span y 
+            | luis_hdz 
+            span siguen a este usuario
+      .row.align-items-center.info-profile.mt-5
+        .col-4.text-center
+          span 102
+          span.title-span publicaciones
+        .col-4.text-center
+          span 3,5k
+          span.title-span seguidores
+        .col-4.text-center
+          span 1k
+          span.title-span seguidos
+      .row.align-items-center.images-profile
+        .col-4.pl-0.pr-1.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/nutricion/inn2.jpg")
+        .col-4.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/fotocabezaolmeca.JPG")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/fotoaerea.jpg")
+        .col-4.pl-0.pr-1.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/foto_5.jpg")
+        .col-4.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/hectorgarcia.jpg")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/fotocardioviejo.jpg")
+        .col-4.pr-0.pr-1.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/fotoinstitutodecardiologia.jpg")
+        .col-4.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/fotopanoramica .jpg")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cardiologia", data-profimage="../../assets/images/instagram/DSC00104.JPG")
+            img(src="../../assets/images/instagram/cardiologia/DSC03164.JPG")
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

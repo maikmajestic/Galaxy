@@ -65,3 +65,16 @@ package.json
 README.md
 
 *.mov
+<<<<<<< HEAD
+=======
+
+dest/apps/galaxy/index.html
+
+dest/apps/galaxy/index.html
+
+dest/assets/css/home.css
+>>>>>>> crumor-branch
+
+*.html
+
+*.css

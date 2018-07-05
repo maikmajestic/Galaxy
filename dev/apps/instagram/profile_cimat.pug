@@ -1,0 +1,83 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram
+      .row.align-items-center.header-instagram
+        h4.title-insta Perfil
+      .row.align-items-center.header-profile
+        .col-3.img-profile
+          img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+        .col-9
+          a(href="#")
+            h3.name-profile cimat
+              i.fas.fa-ellipsis-h
+          .row
+            .col-10
+              button.btn-follow Siguiendo
+            .col-2
+              button.btn-options
+                i.fas.fa-caret-down
+      .row.align-items-center.descrip-profile
+        .col-12
+          p.description 
+            strong Centro de Investigación de Matemáticas (CIMAT) 
+            | El Centro de Investigación de Matemáticas surge a inicio de la década de los ochenta, en medio de un contexto de desarrollo nacional el cual apuntaba hacia una descentralización y rupturas de instituciones con el Estado. Fue en Guanajuato, en el año 1980, cuando un grupo de académicos de la UNAM creó una institución dedicada a la investigación básica en el campo de las matemáticas y al crecimiento de esta ciencia como área de formación a nivel de educación superior. 
+          p.followers-names antonio_delapena 
+            span y 
+            | santiago_sanchez 
+            span siguen a este usuario
+      .row.align-items-center.info-profile.mt-5
+        .col-4.text-center
+          span 10
+          span.title-span publicaciones
+        .col-4.text-center
+          span 1k
+          span.title-span seguidores
+        .col-4.text-center
+          span 80
+          span.title-span seguidos
+      .row.align-items-center.images-profile
+        .col-4.pl-0.pr-1.pb-3
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Actual_Exterior_CIMAT.jpg")
+        .col-4.pb-3
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Antigua_Interior_CIMAT.JPG")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Intermedio_CIMAT_Exterior.JPG")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Intermedio_CIMAT_Interior.JPG")
+        .col-4.pr-0.pl-1.pb-3
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/pena_Colegio.jpg")
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

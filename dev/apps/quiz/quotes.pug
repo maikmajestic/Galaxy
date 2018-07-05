@@ -1,0 +1,34 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/quiz.css")
+  body
+    .container-fluid.main-quiz#main-quotes
+      .row.align-items-center.pt-5
+        .col-4.go-back.text-white
+          i.far.fa-arrow-alt-circle-left
+          span Elegir otro juego
+        .col-4
+        .col-4.answers-result.text-right.pr-5
+          i.fas.fa-check-circle
+          i.fas.fa-check-circle
+          i.fas.fa-check-circle
+      .row.align-items-center.justify-content-center.pt-5
+        .col-7.col-offset-3.quote-wrapper
+          h4 test
+      .row.align-items-center.justify-content-center
+        .col-5.col-offset-4.options-wrapper.animated.flash
+      .row.align-items-center.justify-content-center
+        .col-5.col-offset-4.animated.flash
+          p.info-quote 
+      .row.align-items-center.justify-content-center
+        .col.text-center.restart-wrapper
+          button.btn-restart Jugar de nuevo
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/quiz.js')

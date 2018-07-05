@@ -1,0 +1,70 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        h4.title-insta Foto
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="profile_cimat.html")
+            img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+        .col-9
+          a(href="profile_cimat.html")
+            h3.name-profile-photo cimat
+              span · Siguiendo
+          h3.location-profile Ciudad de México
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/cimat/Actual_Exterior_CIMAT.jpg")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 9,2k
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link sam_gamboa
+              span Desde entonces su actividad académica se ha diversificado e incrementado hasta convertir al Centro en la institución de investigación más importante en su especialidad en el interior de la República Mexicana. De ello dan cuenta el alto nivel académico de sus investigadores; su vasta producción científica arbitrada; su cada vez más creciente participación en el escenario científico internacional y sus programas de licenciatura, maestría y doctorado con reconocimiento de excelencia internacional.
+          .item-comment-wrapper
+            h4.profile-name-link luis_garcia
+              span En marzo del 2011 el Dr. José Antonio de la Peña asumió el cargo de director general del CIMAT. Sostuvo este cargo durante seis años, hasta enero del 2017. Durante este periodo el CIMAT creció y se fortaleció en diversas áreas, ampliando su cobertura geográfica a otros estados y aumentando la plantilla de investigadores. Del 5 al 9 de agosto del 2013, organizado por el CIMAT, se llevó a cabo el Primer Congreso de las Américas en Guanajuato, el cual  reunió a casi mil matemáticos de todo el continente.
+          .item-comment-wrapper
+            h4.profile-name-link salvador_salgado
+              span Actualmente, El Centro de Investigación en Matemáticas AC es un centro público de investigación integrado al Sistema de Centros Públicos CONACYT, dedicado a la generación, transmisión y aplicación de conocimientos especializados en las áreas de matemáticas, estadística y ciencias de la computación.
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

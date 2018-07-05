@@ -1,0 +1,48 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/quiz.css")
+  body
+    .container-fluid.main-quiz
+      .row.align-items-center.pt-5
+        .col-4.go-back.text-white.pl-5
+          i.far.fa-arrow-alt-circle-left
+          span Elegir otro juego
+        .col-4
+        .col-4.answers-result.text-right.pr-5
+          i.fas.fa-check-circle
+          i.fas.fa-check-circle
+          i.fas.fa-check-circle
+      .row.align-items-center.justify-content-center.pt-5
+        .col-8.col-offset-2.text-center
+          h4.text-white.riddle-text 
+      .row.align-items-center.justify-content-center
+        .col-4.option-riddle.text-center.animated.pulse#pos1(data-option="1")
+          img(src="")
+          .info-writter.text-white
+            h4.title-writter 
+            h4.title-book 
+          i.fas.fa-check-circle
+        .col-4.option-riddle.text-center.animated.pulse#pos2(data-option="2")
+          img(src="")
+          .info-writter.text-white
+            h4.title-writter
+            h4.title-book
+          i.fas.fa-check-circle
+        .col-4.option-riddle.text-center.animated.pulse#pos3(data-option="3")
+          img(src="")
+          .info-writter.text-white
+            h4.title-writter 
+            h4.title-book 
+          i.fas.fa-check-circle
+      .row.align-items-center.justify-content-center
+        .col.text-center.restart-wrapper
+          button.btn-restart Jugar de nuevo
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/semblant.js')

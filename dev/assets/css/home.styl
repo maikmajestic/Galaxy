@@ -1,38 +1,107 @@
 body
+<<<<<<< HEAD
 	background url('../images/Fondo1.jpg') no-repeat center center fixed
 	background-size cover
+=======
+	//background url('../images/galaxy.jpg') no-repeat center center fixed
+	//background-size cover
+>>>>>>> crumor-branch
 	background-color #000
 	min-height 100%
-img
-	width 100%
-.item
+.object
+	user-select none
 	position absolute
-	transform scale(0.8)
-	&:hover
-		cursor pointer
-.m82
-	top 45em
-	left 75em
-.untitle
-	top 42em
-	left -31em
-.haro11
-	top 42em
-	left 13em
-.m47
-	top 31em
-	left 11em
-.m60
-	top 16em
-	left 37em
-.m80
-	top 10em
-.m32
-	top 10em
+	width 35%
+	.image
+		position absolute
+		width 40%
+		padding 40px 10px 25px 10px
+		img
+			width 100%
+			cursor pointer
+	.description-wrap
+		background-image url("../images/neon-sign2.png")
+		background-position center top
+		background-size 118% 100%
+		background-repeat no-repeat
+		display none
+		position absolute
+		overflow hidden
+		z-index 100
+		margin 0 0 0 17em
+		width 60%
+		padding 40px 10px 25px 10px
+		h4
+			color #66A8DE
+		p
+			color #7FDFFD
+			font-size 12px
+.avoid-clicks
+	pointer-events none
+.video-bg
+	position fixed
+	top 0
+	right 0
+	width auto
+	min-width 100%
+	height auto
+	min-height 100%
+	z-index -100
+	background transparent url("../videos/universe.mov")
+	background-size cover
+video
+	display block
 .cometa
+	.image
+		img
+			margin 2em
+			width 33%
+	.description-wrap
+		margin 0 0 0 10em
+.spaceship
+	opacity 0.8
+	.image
+		img
+			width 45%
+/*
+.haro11
+	top 20em
+	left 30em
+.haro44
+	top 12em
+	left 45em
+.haro47
+	top 35em
+	left 15em
+.m32
+	top 35em
+	left 50em
+.m59
+	top 0em
+	left 80em
+.m60
+	top 20em
+	left 70em
+.m82
+	top 35em
+	left 80em
+.untitled
+	top 5em
+	left 3em
+.m80
+	top 20em
+	left 5em
+.cometa
+<<<<<<< HEAD
 	transform scale(0.3)
 .m32_info
 	display none
 	left 15em
 	top 12em
 	transform none
+=======
+	transform scale(0.5)
+	top 20em
+	left 90em
+*/
+>>>>>>> crumor-branch
