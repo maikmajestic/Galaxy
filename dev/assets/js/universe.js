@@ -56,10 +56,13 @@ function h11(){
 }
 =======
 */
-
 /*$('.object').on('click', function(){
   console.log("ola k ase ?");
+=======
+$('.object').on('click', function(){
+>>>>>>> origin/crumor-branch
   var description = $('.description-wrap', this);
+  $('.description-wrap').hide();
   description.show();
 });*/
 $('.object').on('click', function(){
