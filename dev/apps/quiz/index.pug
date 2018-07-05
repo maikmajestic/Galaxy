@@ -9,14 +9,16 @@ html
     link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
     link(rel="stylesheet" type="text/css" href="../../assets/css/quiz.css")
   body
-    .container-fluid.main-quiz
-      .row.align-items-center.justify-content-center.pt-5
-        .col-7.col-offset-3.quote-wrapper
-          h4 test
+    .container-fluid.main-quiz#start-screen
       .row.align-items-center.justify-content-center
-        .col-5.col-offset-4.options-wrapper
-      .row.align-items-center.justify-content-center
-        .col-5.col-offset-4
-          p.info-quote 
+        .col-8.col-offset-2.game-wrapper.text-center.animated.pulse
+          h1.text-white Elije un juego:
+          .game-option 
+            a(href="quotes.html") Frases
+          .game-option 
+            a(href="riddle.html") Adivinanzas
+          .game-option 
+            a(href="semblanzas.html") Semblanzas
+
+
     script(src="../../assets/lib/jquery-3.2.1.min.js")
-    script(src='../../assets/js/quiz.js')

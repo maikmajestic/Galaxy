@@ -5,140 +5,47 @@ body {
   background-color: #000;
   min-height: 100%;
 }
-img {
-  opacity: 0.7;
-  width: 100%;
-}
-.item {
+.object {
   position: absolute;
-  -moz-transform: scale(0.8);
-       transform: scale(0.8);
-}
-.item:hover {
+  overflow: hidden;
   cursor: pointer;
+  width: 30%;
 }
-.m82 {
-  top: 45em;
-  left: 75em;
+.object .image {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 50%;
 }
-.untitle {
-  top: 42em;
-  left: -31em;
-}
-.haro11 {
-  top: 42em;
-  left: 13em;
-}
-.lele-info-wrapper {
-  display: none;
-  max-height: 100%;
-  top: 43em;
-  left: 14em;
-  position: absolute;
+.object .image img {
   width: 100%;
 }
-.lele-info-wrapper h4,
-.lele-info-wrapper p {
+.object .description-wrap {
+  display: none;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  width: 50%;
+}
+.object .description-wrap h4 {
   color: #66a8de;
-  margin-top: 45px;
-  z-index: 1000;
-  position: absolute;
-  margin-left: 65px;
-  font-size: 0.8em;
 }
-.lele-info-wrapper p {
+.object .description-wrap p {
   color: #7fdffd;
-  font-size: 0.5em;
-  margin-top: 64px;
-  margin-right: 45px;
-  margin-left: 65px;
-  width: 60%;
-}
-.m47 {
-  top: 31em;
-  left: 11em;
-}
-.m60 {
-  top: 16em;
-  left: 37em;
+  font-size: 12px;
 }
 .m80 {
-  top: 10em;
+  position: fixed;
+  top: 3em;
+  left: 3em;
 }
-.m80-info-wrapper {
-  display: none;
-  max-height: 100%;
+.haro11 {
+  position: fixed;
+  top: 5em;
+  left: 9em;
+}
+.haro44 {
+  position: fixed;
   top: 11em;
-  left: 14em;
-  position: absolute;
-  width: 100%;
-}
-.m80-info-wrapper h4,
-.m80-info-wrapper p {
-  color: #66a8de;
-  margin-top: 45px;
-  z-index: 1000;
-  position: absolute;
-  margin-left: 65px;
-  font-size: 0.8em;
-}
-.m80-info-wrapper p {
-  color: #7fdffd;
-  font-size: 0.5em;
-  margin-top: 64px;
-  margin-right: 45px;
-  margin-left: 65px;
-  width: 60%;
-}
-.m32 {
-  top: 10em;
-}
-.cometa {
-  opacity: 0.6;
-  -moz-transform: scale(0.3);
-       transform: scale(0.3);
-}
-.typewriter h4 {
-  color: #66a8de;
-  font-family: monospace;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #ffa500; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  -moz-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-       animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-}
-/* The typing effect */
-/* The typewriter cursor effect */
-@-moz-keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 20%;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 20%;
-  }
-}
-@-moz-keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #ffa500;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #ffa500;
-  }
+  left: 5em;
 }

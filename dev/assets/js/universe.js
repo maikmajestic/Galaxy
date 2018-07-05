@@ -57,8 +57,14 @@ function h11(){
 =======
 */
 
-$('.object').on('click', function(){
+/*$('.object').on('click', function(){
   console.log("ola k ase ?");
   var description = $('.description-wrap', this);
   description.show();
+});*/
+$('.object').on('click', function(){
+  var description = $('.info-m80');
+  var line = $('.line', this);
+  line.fadeToggle( 'fast', 'linear' );
+  description.fadeToggle('slow', 'linear');
 });

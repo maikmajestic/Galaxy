@@ -1,0 +1,47 @@
+html
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width")
+		link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+		link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+		link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+		link(rel="stylesheet" type="text/css" href="../../assets/css/members.css")
+	body
+		.container-fluid.main-members
+			.row.align-items-center
+				h3.ask-title.animated.bounce ¿Quién crees que ha sido miembro de El Colegio Nacional?
+			.row.align-items-center.justify-content-center
+				.col-4.member-item.flip-container.animated.pulse#pos1(ontouchstart="this.classList.toggle('active');")
+					.flipper
+						.front
+							img(src="../../assets/images/members/polaroid_back.png")
+						.back
+							.info-member
+								i.fas
+								span 
+							img(src="../../assets/images/members/polaroid_back.png")
+				.col-4.member-item.flip-container.animated.pulse#pos2(ontouchstart="this.classList.toggle('active');")
+					.flipper
+						.front
+							img(src="../../assets/images/members/polaroid_back.png")
+						.back
+							.info-member
+								i.fas
+								span 
+							img(src="../../assets/images/members/polaroid_back.png")
+				.col-4.member-item.flip-container.animated.pulse#pos3(ontouchstart="this.classList.toggle('active');")
+					.flipper
+						.front
+							img(src="../../assets/images/members/polaroid_back.png")
+						.back
+							.info-member
+								i.fas
+								span 
+							img(src="../../assets/images/members/polaroid_back.png")
+			//.row.align-items-center.justify-content-center
+				.col-4.col-offset-4.text-center.restart-wrapper
+					button.btn-restart Jugar de nuevo
+	script(src="../../assets/lib/jquery-3.2.1.min.js")
+	script(src='../../assets/js/members.js')
