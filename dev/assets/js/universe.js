@@ -8,17 +8,17 @@ var iSpeed = 25; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
 var iScrollAt = 20; // start scrolling up at this many lines
- 
+
 var iTextPos = 0; // initialise text position
 var sContents = ''; // initialise contents variable
 var iRow; // initialise current row
- 
+
 function typewriterm80()
 {
  sContents =  ' ';
  iRow = Math.max(0, iIndex-iScrollAt);
  var destination = document.getElementById("typedtext");
- 
+
  while ( iRow < iIndex ) {
   sContents += aText[iRow++] + '<br />';
  }
@@ -56,9 +56,35 @@ function h11(){
 }
 =======
 */
-
-$('.object').on('click', function(){
-  var description = $('.description-wrap', this);
-  $('.description-wrap').hide();
-  description.show();
+$(function() {
+  //object draggable
+  $(".object").draggable({
+    containment: "body",
+    obstacle: ".object",
+    preventCollision: true,
+    start: function(event, ui) {
+      $("img", this).addClass('avoid-clicks');
+    }
+  });
+  //show info
+  $('.object').on('click', function() {
+    var img = $("img", this);
+    if (img.hasClass('avoid-clicks')) {
+      img.removeClass('avoid-clicks');
+    } else {
+      var description = $(".description-wrap", this);
+      //console.log("showing info");
+      if (description.is(":visible")) {
+        description.hide();
+      } else {
+        description.show();
+      }
+    }
+    //$('.description-wrap').hide();
+    //description.show();
+  });
+  //prevent right click
+  $(this).bind("contextmenu", function(e) {
+    e.preventDefault();
+  });
 });
