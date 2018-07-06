@@ -25,14 +25,11 @@ $( document ).ready(function() {
 			localStorage.setItem("answers", 0);
 		}
 		else if(answers == 3){
-			answers = 0;
 			localStorage.setItem("answers", 3);
 			var code = Math.floor(Math.random() * 101);
 			$('.code-price').text('PLURAL-2018-'+code);
-			$('#price').toggle('modal');
-			$('body').css('pointer-events', 'none');
+			$('.price-wrapper').show();
 			setTimeout(function(){ location.reload(true) }, 20000);
-			localStorage.setItem("answers", 0);
 		}
 		else if(answers > 3){
 			answers = 0;
@@ -46,6 +43,10 @@ $( document ).ready(function() {
 
 	$('.go-back').on('click', function(){
 		window.location.href = "index.html";
+	});
+
+	$('.btn-accept').on('click', function(){
+		$(this).parents('.modal').toggle('modal');
 	});
 
 	var riddle = ['Pueblo imaginario lleno de voces, prejuicios y religión.', 
@@ -82,6 +83,23 @@ $( document ).ready(function() {
 	'../../assets/images/quiz/escritores/JoseEPacheco.png', 
 	'../../assets/images/quiz/escritores/OctavioPaz.png', 
 	'../../assets/images/quiz/escritores/AlfonsoReyes.png'];
+	var answerWritter = ['Publicada en 1947, nos cuenta la historia de un pueblo imaginario que comienza a vivir los cambios progresistas de Porfirio Díaz y la llegada de la revolución en un lugar donde la costumbre y el paso lento, gobierna más que el desarrollo. Considerada una de las mejores novelas del siglo XX, sentó un nuevo precedente en la estética literaria de la revolución.',
+	'Fuego de pobres es la manifestación de una nueva visión, la del descubrimiento de los hechos sociales, de las escenas perdidas que abren paso a las sensaciones más próximas al hombre.',
+	'Su libro más famoso, fue una sabia combinación entre el ensayo y el relato que unió las historias más absurdas con la más profunda de las melancolías. Un libro que no envejece, Rossi supo impregnar con su filosofía y sus pensamientos para formar un tecto que cada tanto aparecen y modifican el universo literario.',
+	'Fruto de una labor de investigación prolongada durante años y publicada en 1970, es indispensable para cualquier estudio sobre el poeta de Lascas. Díaz Mirón, Su vida y obra fue el segundo libro de crítica que escribió Castro Leal.',
+	'Un retrato plenamente logrado, Domínguez Michael no se limita a contar sobre la vida del fraile. Al mismo tiempo esta biografía nos cuenta sobre el culto religioso en nuestro país durante la época.',
+	'Publicada en 1949, este poemario es una denuncia al holocausto que se vivió en la segunda guerra mundial, una descripción del hombre luchando entre lo terrenal y lo sublime. En Babel, encontramos una poesía alimentada por la matríz de la cultura clásica pero inspirada en los horroes de una guerra que acababa de suceder.',
+	'Publicada en 1987, es la tercera novela de Fernando Del Paso. Dividida en dos partes: un extenso monólogo en viva voz de la emperatriz Carlota, intercalado con once capítulos que presentan la historia del efímero segundo imperio mexicano. Considerada una de las mejores novelas mexicanas de los últimos tiempos.',
+	'Una antología literaria del mar que busca entre el acervo de las letras universales las palabras más importantes que le han dedicado. Cuna de fantasías, origen de vida, causa de muerte, vértigo amenazante o dador de paz. García Terrés selecciona bajo sus preferencias personales variadas perspectivas y diversos matices sobre una eterna obsesión del hombre con el océano.',
+	'Poseedor de una pluma notable, fue una pieza clave para la consolidación de las institutciones educativas en México. En este segundo volumen de memorias narra sus experiencias con personajes ilustres y sus reflexiones sobre un amplio abanico de hechos que formaron el siglo XX.',
+	'Naturalezas vivas “es una aventura que da al mar” en palabras de Juan Villoro. El título de este poemario, resume su manera melancólica de pensar y los paisajes donde la voz humana es relevada por el viento y el crujir de las hojas. Xirau escribió este poemario en catalán, su idioma natal.',
+	'El autor es capaz de condensar una rareza que escapa de la literatura mexicana del siglo XX. Ganadora del premio Xavier Villaurrutia en 1965 donde Elizondo cambió para siempre el panorama de la novela en México.',
+	'De todos los poetas de la generación de 1927, Luis Cernuda llama la atención del escritor Vicente Quirarte por su gran calidad y una idea muy clara sobre la creación poética. Este ensayo pretende ser una lectura dialéctica de la obra de Cernuda. Se ofrecen los elementos de su poética, la manera en que el poeta se enfrenta al mundo con toda la irracionalidad y la pasión de la juventud, mientras que los temas cernudianos con los que termina, se caracterizan, por la reflexión, el apartamiento consciente y el anhelo por encontrar una solución al conflicto Realidad/Deseo.',
+	'Villoro sigue la tradición del novelista mexicano para ocupar la Ciudad de México como el mejor de los escenarios. El caos y el inminente desmoronamiento son partes de la misma y en especial el barrio de San Lorenzo que sirve de espacio para la historia de esta clínica oftalmológica, llena de misterios e ironías, como la misma ciudad en la que se encuentra.',
+	'Publicada en 1958 inmediatamente se volvió una de las obras más importantes en letras hispanoamericanas. Su título proviene de una expresión que podemos encontrar en Visión del Anahuac de Alfonso Reyes, que a su vez recuerda la famosa frase de Alexander Von Humboldt. En esta novela se juega con la idea de la conformación de la ciudad a partir de la diversidad de orígenes, ideas y clases sociales. ',
+	'Apareció por primera vez en el suplemento “Sábado” del periódico Unomásuno el 7 de junio de 1980. Causó tanto revuelo que un año más tarde sería publicada en forma de libro. Hasta la fecha lleva más de 40 reimpresiones.',
+	'Publicado por primera vez en 1950, este ensayo es un texto obligado para comprender la esencia de ser mexicano. Paz nos invita a reflexionar sobre las expresiones, actitudes y tradiciones del mexicano. Sus palabras descubren ligaduras que atan al hombre con su cultura, manejan sus reacciones y nos dan esa coraza de espiritualidad mexicana.',
+	'Textos y comentarios sobre estudios de la obra de Luis de Góngora, Reyes contempló varios aspectos de la vida del poeta, asi como su influencia en otros escritores y su importancia para el mundo de las letras. Alfonso Reyes dedicó otros dos libros al mismo tema.'];
 	var name_wt = ['Agustín Yáñez', 'Rubén Bonifaz Nuño', 'Alejando Rossi', 'Antonio Castro Leal', 'Christopher Domínguez', 'Enrique González', 'Fernando del Paso', 'Jaime García Terres', 'Jaime Torres Bodet', 'Ramón Xirau', 'Salvador Elizondo', 'Vicente Quirarte', 'Juan Villoro', 'Carlos Fuentes', 'José Emilio Pacheco', 'Octavio Paz', 'Alfonso Reyes'];
 	var book = ['Al filo del agua', 'Fuego de pobres', 'Manual del distraído', 'Díaz Miron su vida y obra', 'Fray Servando', 'Babel', 'Noticias del imperio', '100 imágenes del mar', 'Memorias II', 'Naturalezas vivas', 'Farabeuf', 'La poética del hombre dividido en la obra de Luis Cernuda', 'El disparo de Argón', 'La región más transparente del aire', 'Las batallas en el desierto', 'Laberinto de la soledad', 'Cuestiones Gongorinas'];
 
@@ -93,6 +111,8 @@ $( document ).ready(function() {
 	$('#pos'+posphoto+' img').attr('src', writters[writterRand]);
 	$('#pos'+posphoto+' .title-writter').text(name_wt[writterRand]);
 	$('#pos'+posphoto+' .title-book').text(book[writterRand]);
+	$('.wt-name').text(name_wt[writterRand]);
+	$('.wt-data').text(answerWritter[writterRand]);
 	var opt = 0;
 	if(writterRand == 16){
 		var nn = writterRand-1;
@@ -157,6 +177,7 @@ $( document ).ready(function() {
     	}
     	else if(localStorage.answers == 3){
     		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answers", 0);
     	}
 				$(this).addClass('active');
 				$('.option-riddle').css('pointer-events', 'none');
@@ -179,6 +200,7 @@ $( document ).ready(function() {
     	}
     	else if(localStorage.answers == 3){
     		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answers", 0);
     	}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check-circle');
@@ -189,5 +211,6 @@ $( document ).ready(function() {
 			setTimeout(function(){ $('.option-wrap').hide();$('.option-wrap.error').fadeIn(); }, 100);
 			//setTimeout(function(){ location.reload(true) }, 15000);
 		}
+		$('#answer-modal').toggle('modal');
 	});
 });

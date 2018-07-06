@@ -25,14 +25,11 @@ $( document ).ready(function() {
 			localStorage.setItem("answersQ", 0);
 		}
 		else if(answersQ == 3){
-			answersQ = 0;
 			localStorage.setItem("answersQ", 3);
 			var code = Math.floor(Math.random() * 101);
 			$('.code-price').text('PLURAL-2018-'+code);
 			$('#price').toggle('modal');
-			$('body').css('pointer-events', 'none');
 			setTimeout(function(){ location.reload(true) }, 20000);
-			localStorage.setItem("answersQ", 0);
 		}
 		else if(answersQ > 3){
 			answersQ = 0;
@@ -46,6 +43,10 @@ $( document ).ready(function() {
 
 	$('.go-back').on('click', function(){
 		window.location.href = "index.html";
+	});
+
+	$('.btn-accept').on('click', function(){
+		$(this).parents('.modal').toggle('modal');
 	});
 
 	var quotes1 = ['Bendigo al santo médico que con sus palabras y sus visajes me fue abriendo poco a poco los ojos del entendimiento', 'Lo necesario es caminar, caminar siempre, no estacionarse jamás; ser dueños del valle, de la planicies, de la sierra y de todo lo que la vista abarca.'];
@@ -154,6 +155,7 @@ $( document ).ready(function() {
     	}
     	else if(localStorage.answersQ == 3){
     		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersQ", 0);
     	}
 				$(this).addClass('active');
 				$('.option-wrap').css('pointer-events', 'none');
@@ -176,6 +178,7 @@ $( document ).ready(function() {
     	}
     	else if(localStorage.answersQ == 3){
     		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersQ", 0);
     	}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check');
