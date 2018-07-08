@@ -16,7 +16,7 @@ html
         .col-3.img-profile
           img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
         .col-9
-          a(href="#.html")
+          a(href="#")
             h3.name-profile cimat
               i.fas.fa-ellipsis-h
           .row
@@ -44,20 +44,25 @@ html
         .col-4.text-center
           span 80
           span.title-span seguidos
-      .row.align-items-center.images-profile.mb-5
+      .row.align-items-center.images-profile
         .col-4.pl-0.pr-1.pb-3
-          a(href="photo_cimat.html")
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
             img(src="../../assets/images/instagram/cimat/Actual_Exterior_CIMAT.jpg")
         .col-4.pb-3
-          img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
         .col-4.pr-0.pl-1.pb-3
-          img(src="../../assets/images/instagram/cimat/Antigua_Interior_CIMAT.JPG")
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Antigua_Interior_CIMAT.JPG")
         .col-4.pr-0.pl-1.pb-3
-          img(src="../../assets/images/instagram/cimat/Intermedio_CIMAT_Exterior.JPG")
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Intermedio_CIMAT_Exterior.JPG")
         .col-4.pr-0.pl-1.pb-3
-          img(src="../../assets/images/instagram/cimat/Intermedio_CIMAT_Interior.JPG")
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/Intermedio_CIMAT_Interior.JPG")
         .col-4.pr-0.pl-1.pb-3
-          img(src="../../assets/images/instagram/cimat/pena_Colegio.jpg")
+          a.photo-link(data-profile="cimat", data-profimage="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
+            img(src="../../assets/images/instagram/cimat/pena_Colegio.jpg")
       .row.align-items-center.justify-content-center.footer-icons.text-center
         .col-2
           a(href="index.html")
@@ -74,3 +79,5 @@ html
         .col-2
           a(href="#")
             i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

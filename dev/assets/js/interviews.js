@@ -1,5 +1,13 @@
 $( document ).ready(function() {
 
+	$('#video i').on('click', function(){
+		window.history.back();
+	});
+
+	$('.go-back').on('click', function(){
+		window.history.back();
+	});
+
 	var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
         sURLVariables = sPageURL.split('&'),
