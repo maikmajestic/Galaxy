@@ -1,43 +1,88 @@
 $( document ).ready(function() {
 
-	if(localStorage.answers){
-		if(localStorage.answers == 1){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    	}
-    	else if(localStorage.answers == 2){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    		$('.answers-result i:nth-child(2)').addClass('active');
-    	}
-    	else if(localStorage.answers == 3){
-    		$('.answers-result i').addClass('active');
-    		localStorage.setItem("answers", 0);
-    	}
+	if(localStorage.success && localStorage.error){
+		if(localStorage.success == 1){
+			$('.answers-result i').removeClass('active');
+			$('.answers-result i').first().removeClass('fa-circle');
+			$('.answers-result i').first().addClass('fa-check-circle');
+			$('.answers-result i').first().addClass('active');
+		}
+		if(localStorage.success == 2){
+			$('.answers-result i').removeClass('active');
+			$('.answers-result i').first().removeClass('fa-circle');
+			$('.answers-result i').first().addClass('fa-check-circle');
+			$('.answers-result i').first().addClass('active');
+			$('.answers-result i:nth-child(2)').addClass('active');
+			$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+		}
+		if(localStorage.success == 3){
+			$('.answers-result i').first().removeClass('fa-circle');
+			$('.answers-result i').first().addClass('fa-check-circle');
+			$('.answers-result i').first().addClass('active');
+			$('.answers-result i:nth-child(2)').addClass('active');
+			$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+			$('.answers-result i:nth-child(3)').addClass('active');
+			$('.answers-result i:nth-child(3)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(3)').addClass('fa-check-circle');
+		}
+		if(localStorage.error == 1){
+			$('.answers-result i:nth-child(4)').removeClass('active');
+			$('.answers-result i:nth-child(4)').addClass('error');
+			$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+		}
+		if(localStorage.error == 2){
+			$('.answers-result i:nth-child(4)').removeClass('active');
+			$('.answers-result i:nth-child(4)').addClass('error');
+			$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+			$('.answers-result i:nth-child(5)').removeClass('active');
+			$('.answers-result i:nth-child(5)').addClass('error');
+			$('.answers-result i:nth-child(5)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
+		}
+		if(localStorage.error >= 3){
+			localStorage.setItem("answers", 0);
+			localStorage.setItem("success", 0);
+			localStorage.setItem("error", 0);
+			//$('#price').toggle('modal');
+		}
 	}
 	else{
 		localStorage.setItem("answers", 0);
+		localStorage.setItem("success", 0);
+		localStorage.setItem("error", 0);
 	}
 
-	function checkAnswers(answers){
-		if(answers <= 0){
-			answers = 0;
-			localStorage.setItem("answers", 0);
+	function checkAnswersSuccess(success){
+		if(success == 1){
+			localStorage.setItem("success", 1);
 		}
-		else if(answers == 3){
-			localStorage.setItem("answers", 3);
+		else if(success == 2){
+			localStorage.setItem("success", 2);
+		}
+		else if(success == 3){
+			localStorage.setItem("success", 3);
 			var code = Math.floor(Math.random() * 101);
 			$('.code-price').text('PLURAL-2018-'+code);
 			$('.price-wrapper').show();
-			setTimeout(function(){ location.reload(true) }, 20000);
+			$('body').css('pointer-events', 'none');
 		}
-		else if(answers > 3){
-			answers = 0;
-			localStorage.setItem("answers", 0);
+	}
+
+	function checkAnswersError(error){
+		if(error == 1){
+			localStorage.setItem("error", 1);
 		}
-		else{
-			answers = answers;
-			localStorage.setItem("answers", answers);
+		if(error == 2){
+			localStorage.setItem("error", 2);
+		}
+		if(error == 3){
+			localStorage.setItem("error", 3);
+			$('.error-wrapper').show();
+			$('body').css('pointer-events', 'none');
 		}
 	}
 
@@ -47,6 +92,7 @@ $( document ).ready(function() {
 
 	$('.btn-accept').on('click', function(){
 		$(this).parents('.modal').toggle('modal');
+		location.reload(true);
 	});
 
 	var riddle = ['Pueblo imaginario lleno de voces, prejuicios y religión.', 
@@ -162,23 +208,41 @@ $( document ).ready(function() {
 		var option = $(this).data('option');
 		console.log(option);
 		var answers = parseInt(localStorage.getItem("answers"));
+		var success = parseInt(localStorage.getItem("success"));
+		var error = parseInt(localStorage.getItem("error"));
 		if(option == opt){
-			answers=answers+1;
-			checkAnswers(answers);
-    	console.log(localStorage.answers);
-    	if(localStorage.answers == 1){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    	}
-    	else if(localStorage.answers == 2){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    		$('.answers-result i:nth-child(2)').addClass('active');
-    	}
-    	else if(localStorage.answers == 3){
-    		$('.answers-result i').addClass('active');
-    		localStorage.setItem("answers", 0);
-    	}
+			success=success+1;
+			checkAnswersSuccess(success);
+			console.log(localStorage.success);
+			if(localStorage.success == 1){
+				$('.answers-result i').removeClass('active');
+				$('.answers-result i').first().removeClass('fa-circle');
+				$('.answers-result i').first().addClass('fa-check-circle');
+				$('.answers-result i').first().addClass('active');
+			}
+			else if(localStorage.success == 2){
+				$('.answers-result i').removeClass('active');
+				$('.answers-result i').first().removeClass('fa-circle');
+				$('.answers-result i').first().addClass('fa-check-circle');
+				$('.answers-result i').first().addClass('active');
+				$('.answers-result i:nth-child(2)').addClass('active');
+				$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+			}
+			else if(localStorage.success == 3){
+				$('.answers-result i').first().removeClass('fa-circle');
+				$('.answers-result i').first().addClass('fa-check-circle');
+				$('.answers-result i').first().addClass('active');
+				$('.answers-result i:nth-child(2)').addClass('active');
+				$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+				$('.answers-result i:nth-child(3)').addClass('active');
+				$('.answers-result i:nth-child(3)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(3)').addClass('fa-check-circle');
+				localStorage.setItem("answers", 1);
+				localStorage.setItem("success", 0);
+				localStorage.setItem("error", 0);
+			}
 				$(this).addClass('active');
 				$('.option-riddle').css('pointer-events', 'none');
 				$('.btn-restart').show();
@@ -186,22 +250,31 @@ $( document ).ready(function() {
 				//setTimeout(function(){ location.reload(true) }, 15000);
 		}
 		else{
-			answers=answers-1;
-			checkAnswers(answers);
-    	console.log(localStorage.answers);
-    	if(localStorage.answers == 1){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    	}
-    	else if(localStorage.answers == 2){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    		$('.answers-result i:nth-child(2)').addClass('active');
-    	}
-    	else if(localStorage.answers == 3){
-    		$('.answers-result i').addClass('active');
-    		localStorage.setItem("answers", 0);
-    	}
+			error=error+1;
+			checkAnswersError(error);
+			console.log(localStorage.error);
+			if(localStorage.error == 1){
+				$('.answers-result i:nth-child(4)').removeClass('active');
+				$('.answers-result i:nth-child(4)').addClass('error');
+				$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+			}
+			else if(localStorage.error == 2){
+				$('.answers-result i:nth-child(4)').removeClass('active');
+				$('.answers-result i:nth-child(4)').addClass('error');
+				$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+				$('.answers-result i:nth-child(5)').removeClass('active');
+				$('.answers-result i:nth-child(5)').addClass('error');
+				$('.answers-result i:nth-child(5)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
+			}
+			else if(localStorage.error == 3){
+				localStorage.setItem("answers", 0);
+				localStorage.setItem("success", 0);
+				localStorage.setItem("error", 0);
+				//$('#price').toggle('modal');
+			}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check-circle');
 			$(this).find('i').addClass('fa-times');

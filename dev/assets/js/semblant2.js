@@ -1,43 +1,90 @@
 $( document ).ready(function() {
 
-	if(localStorage.answersS){
-		if(localStorage.answersS == 1){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    	}
-    	else if(localStorage.answersS == 2){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    		$('.answers-result i:nth-child(2)').addClass('active');
-    	}
-    	else if(localStorage.answersS == 3){
-    		$('.answers-result i').addClass('active');
-    		localStorage.setItem("answersS", 0);
-    	}
+	if(localStorage.successS && localStorage.errorS){
+		if(localStorage.successS == 1){
+			$('.answers-result i').removeClass('active');
+			$('.answers-result i').first().removeClass('fa-circle');
+			$('.answers-result i').first().addClass('fa-check-circle');
+			$('.answers-result i').first().addClass('active');
+		}
+		if(localStorage.successS == 2){
+			$('.answers-result i').removeClass('active');
+			$('.answers-result i').first().removeClass('fa-circle');
+			$('.answers-result i').first().addClass('fa-check-circle');
+			$('.answers-result i').first().addClass('active');
+			$('.answers-result i:nth-child(2)').addClass('active');
+			$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+		}
+		if(localStorage.successS == 3){
+			$('.answers-result i').first().removeClass('fa-circle');
+			$('.answers-result i').first().addClass('fa-check-circle');
+			$('.answers-result i').first().addClass('active');
+			$('.answers-result i:nth-child(2)').addClass('active');
+			$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+			$('.answers-result i:nth-child(3)').addClass('active');
+			$('.answers-result i:nth-child(3)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(3)').addClass('fa-check-circle');
+		}
+		if(localStorage.errorS == 1){
+			$('.answers-result i:nth-child(4)').removeClass('active');
+			$('.answers-result i:nth-child(4)').addClass('error');
+			$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+		}
+		if(localStorage.errorS == 2){
+			$('.answers-result i:nth-child(4)').removeClass('active');
+			$('.answers-result i:nth-child(4)').addClass('error');
+			$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+			$('.answers-result i:nth-child(5)').removeClass('active');
+			$('.answers-result i:nth-child(5)').addClass('error');
+			$('.answers-result i:nth-child(5)').removeClass('fa-circle');
+			$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
+		}
+		if(localStorage.errorS >= 3){
+			localStorage.setItem("answersS", 0);
+			localStorage.setItem("successS", 0);
+			localStorage.setItem("errorS", 0);
+			//$('#price').toggle('modal');
+		}
 	}
 	else{
 		localStorage.setItem("answersS", 0);
+		localStorage.setItem("successS", 0);
+		localStorage.setItem("errorS", 0);
 	}
 
-	function checkAnswers(answersS){
-		if(answersS <= 0){
-			answersS = 0;
-			localStorage.setItem("answersS", 0);
+	function checkAnswersSuccess(successS){
+		if(successS == 1){
+			localStorage.setItem("successS", 1);
 		}
-		else if(answersS == 3){
-			localStorage.setItem("answersS", 3);
+		else if(successS == 2){
+			localStorage.setItem("successS", 2);
+		}
+		else if(successS == 3){
+			localStorage.setItem("successS", 3);
 			var code = Math.floor(Math.random() * 101);
 			$('.code-price').text('PLURAL-2018-'+code);
+			$('.price-wrapper').show();
 			$('#price').toggle('modal');
-			setTimeout(function(){ location.reload(true) }, 20000);
+			$('body').css('pointer-events', 'none');
 		}
-		else if(answersS > 3){
-			answersS = 0;
-			localStorage.setItem("answersS", 0);
+	}
+
+	function checkAnswersError(errorS){
+		if(errorS == 1){
+			localStorage.setItem("errorS", 1);
 		}
-		else{
-			answersS = answersS;
-			localStorage.setItem("answersS", answersS);
+		if(errorS == 2){
+			localStorage.setItem("errorS", 2);
+		}
+		if(errorS == 3){
+			localStorage.setItem("errorS", 3);
+			$('#error-modal').toggle('modal');
+			$('.error-wrapper').show();
+			$('body').css('pointer-events', 'none');
 		}
 	}
 
@@ -47,6 +94,7 @@ $( document ).ready(function() {
 
 	$('.btn-accept').on('click', function(){
 		$(this).parents('.modal').toggle('modal');
+		location.reload(true);
 	});
 
 	var semblant = ['Entre sus novelas destacan Al filo del agua, considerada la culminación de la novela de la Revolución; Ojerosa y pintada; Las tierras flacas, Las vueltas del tiempo  y La ladera dorada.  Se le sitúa entre los novelistas de la Revolución, pero se trata de un cultivador del estilo literario y un renovador de la estructura literaria.', 
@@ -135,23 +183,41 @@ $( document ).ready(function() {
 		var option = $(this).data('option');
 		console.log(option);
 		var answersS = parseInt(localStorage.getItem("answersS"));
+		var successS = parseInt(localStorage.getItem("successS"));
+		var errorS = parseInt(localStorage.getItem("errorS"));
 		if(option == opt){
-			answersS=answersS+1;
-			checkAnswers(answersS);
-    	console.log(localStorage.answersS);
-    	if(localStorage.answersS == 1){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    	}
-    	else if(localStorage.answersS == 2){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    		$('.answers-result i:nth-child(2)').addClass('active');
-    	}
-    	else if(localStorage.answersS == 3){
-    		$('.answers-result i').addClass('active');
-    		localStorage.setItem("answersS", 0);
-    	}
+			successS=successS+1;
+			checkAnswersSuccess(successS);
+			console.log(localStorage.successS);
+			if(localStorage.successS == 1){
+				$('.answers-result i').removeClass('active');
+				$('.answers-result i').first().removeClass('fa-circle');
+				$('.answers-result i').first().addClass('fa-check-circle');
+				$('.answers-result i').first().addClass('active');
+			}
+			else if(localStorage.successS == 2){
+				$('.answers-result i').removeClass('active');
+				$('.answers-result i').first().removeClass('fa-circle');
+				$('.answers-result i').first().addClass('fa-check-circle');
+				$('.answers-result i').first().addClass('active');
+				$('.answers-result i:nth-child(2)').addClass('active');
+				$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+			}
+			else if(localStorage.successS == 3){
+				$('.answers-result i').first().removeClass('fa-circle');
+				$('.answers-result i').first().addClass('fa-check-circle');
+				$('.answers-result i').first().addClass('active');
+				$('.answers-result i:nth-child(2)').addClass('active');
+				$('.answers-result i:nth-child(2)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(2)').addClass('fa-check-circle');
+				$('.answers-result i:nth-child(3)').addClass('active');
+				$('.answers-result i:nth-child(3)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(3)').addClass('fa-check-circle');
+				localStorage.setItem("answersQ", 1);
+				localStorage.setItem("successQ", 0);
+				localStorage.setItem("errorQ", 0);
+			}
 				$(this).addClass('active');
 				$(this).append('<h3 class="text-white">Respuesta correcta</h3>');
 				$('.option-riddle').css('pointer-events', 'none');
@@ -160,22 +226,31 @@ $( document ).ready(function() {
 				//setTimeout(function(){ location.reload(true) }, 15000);
 		}
 		else{
-			answersS=answersS-1;
-			checkAnswers(answersS);
-    	console.log(localStorage.answersS);
-    	if(localStorage.answersS == 1){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    	}
-    	else if(localStorage.answersS == 2){
-    		$('.answers-result i').removeClass('active');
-    		$('.answers-result i').first().addClass('active');
-    		$('.answers-result i:nth-child(2)').addClass('active');
-    	}
-    	else if(localStorage.answersS == 3){
-    		$('.answers-result i').addClass('active');
-    		localStorage.setItem("answersS", 0);
-    	}
+			errorS=errorS+1;
+			checkAnswersError(errorS);
+			console.log(localStorage.errorS);
+			if(localStorage.errorS == 1){
+				$('.answers-result i:nth-child(4)').removeClass('active');
+				$('.answers-result i:nth-child(4)').addClass('error');
+				$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+			}
+			else if(localStorage.errorS == 2){
+				$('.answers-result i:nth-child(4)').removeClass('active');
+				$('.answers-result i:nth-child(4)').addClass('error');
+				$('.answers-result i:nth-child(4)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(4)').addClass('fa-times-circle');
+				$('.answers-result i:nth-child(5)').removeClass('active');
+				$('.answers-result i:nth-child(5)').addClass('error');
+				$('.answers-result i:nth-child(5)').removeClass('fa-circle');
+				$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
+			}
+			else if(localStorage.errorS == 3){
+				localStorage.setItem("answersS", 0);
+				localStorage.setItem("successS", 0);
+				localStorage.setItem("errorS", 0);
+				//$('#price').toggle('modal');
+			}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check-circle');
 			$(this).find('i').addClass('fa-times');

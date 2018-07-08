@@ -1,0 +1,116 @@
+body
+	background-color #000
+	min-height 100%
+#wide
+	height 800px
+	padding-top 7%
+	width 1280px
+.video-bg
+	position fixed
+	top 0
+	right 0
+	width auto
+	min-width 100%
+	height auto
+	min-height 100%
+	z-index -100
+	background transparent url("../videos/universe.mov")
+	background-size cover
+video
+	display block	
+.object
+	transform scale(1.1)
+.image
+	img
+		width 100%
+.info-wrapper
+	background url('../images/neon-sign2.png')
+	background-size cover
+	background-repeat round
+	opacity 0
+	overflow auto
+	width 100%
+	img
+		width 100%
+	p
+		color deepskyblue
+		line-height 1.2
+	h4
+		color blue
+		font-size 0.7em
+	i
+		color deepskyblue
+		opacity 0.7
+		position absolute
+		right 30px
+		top 33px
+.line
+	height 1%
+	transform rotate(90deg)
+	width 3%
+.info-card
+	height 240px
+	overflow-y auto
+	margin 30px 0
+	padding 5px 15px 0
+.name-element
+	font-size 0.8em
+.body-element
+	font-size 0.6em
+.faded
+	-webkit-animation: fade 5s
+	animation: fade 5s
+	-moz-animation: fade 5s
+	-o-animation: fade 5s
+
+@-webkit-keyframes faded
+	0% 
+		opacity: 0.2
+	50% 
+		opacity: 1
+	100% 
+		opacity:0
+
+@-moz-keyframes faded
+	0%
+		opacity: 0.2
+	50% 
+		opacity: 1
+	100% 
+		opacity:0
+
+@keyframes faded
+	0% 
+		opacity: 0.2
+	50% 
+		opacity: 1
+	100%
+		opacity: 0
+	
+@-o-keyframes faded
+	0% 
+		opacity: 0.2
+	50% 
+		opacity: 1
+	100%
+		opacity: 0.2
+#vid-modal, #vid-modal2
+	.modal-dialog
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0
+		max-width 100%!important
+
+	.modal-content
+		background none
+		height: auto;
+		min-height: 100%;
+		border-radius: 0;
+		transform scale(1.3)
+.moon-object
+	left -23em
+	opacity 0.8
+	position absolute
+	top -16em
+	transform scale(0.05)

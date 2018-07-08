@@ -124,6 +124,9 @@ body
 	i.active
 		color green
 		opacity 1
+	i.error
+		color #f00
+		opacity 1
 .code-body
 	color #fff
 	font-size 2em
@@ -141,7 +144,7 @@ body
 .game-title
 	color #fff
 	font-size 2em
-#answer-modal
+#answer-modal, #error-modal
 	margin-top 21%
 	.modal-body
 		background #000
@@ -158,7 +161,18 @@ body
 	font-size 1.5em
 	line-height 1
 	margin-top 30px
-.price-wrapper
+.price-wrapper, .error-wrapper
 	display none
 	h2
 		margin-top 0%!important
+	h2.error
+		color #f00
+#main-quotes, #semblant
+	.error-wrapper
+		h2
+			margin-top 10%!important
+	#price
+		.code-body
+			margin-top 50px
+		.btn-accept
+			color #fff
