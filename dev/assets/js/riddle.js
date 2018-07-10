@@ -44,7 +44,6 @@ $( document ).ready(function() {
 			$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
 		}
 		if(localStorage.error >= 3){
-			localStorage.setItem("answers", 0);
 			localStorage.setItem("success", 0);
 			localStorage.setItem("error", 0);
 			//$('#price').toggle('modal');
@@ -67,8 +66,11 @@ $( document ).ready(function() {
 			localStorage.setItem("success", 3);
 			var code = Math.floor(Math.random() * 101);
 			$('.code-price').text('PLURAL-2018-'+code);
-			$('.price-wrapper').show();
-			$('body').css('pointer-events', 'none');
+			if(localStorage.answers != 1){
+				$('.price-wrapper').show();
+				$('body').css('pointer-events', 'none');
+				setTimeout(function(){ localStorage.setItem("answers", 0); }, 300000);
+			}
 		}
 	}
 
@@ -81,8 +83,10 @@ $( document ).ready(function() {
 		}
 		if(error == 3){
 			localStorage.setItem("error", 3);
-			$('.error-wrapper').show();
-			$('body').css('pointer-events', 'none');
+			if(localStorage.answers != 1){
+				$('.error-wrapper').show();
+				$('body').css('pointer-events', 'none');
+			}
 		}
 	}
 
@@ -91,7 +95,6 @@ $( document ).ready(function() {
 	});
 
 	$('.btn-accept').on('click', function(){
-		$(this).parents('.modal').toggle('modal');
 		location.reload(true);
 	});
 

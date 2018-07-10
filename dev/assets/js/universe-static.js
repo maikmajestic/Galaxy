@@ -43,12 +43,15 @@ $( document ).ready(function() {
 		if(count == 120){
 			$('#vid-modal').modal('show');
 			$('#vid-modal video').get(0).play()
-			setTimeout(function(){ $('#vid-modal').removeClass('zoomIn');$('#vid-modal').addClass('fadeOut');$('#vid-modal').modal('hide'); count1 = 0;}, 20500);
+			setTimeout(function(){ $('#vid-modal').modal('hide'); count1 = 0;}, 20500);
 		}
 		if(count == 19){
 		  $('#vid-modal2').modal('show');
 			$('#vid-modal2 video').get(0).play()
-			setTimeout(function(){ $('#vid-modal2').removeClass('zoomIn');$('#vid-modal2').addClass('fadeOut');$('#vid-modal2').modal('hide'); count1 = 0;}, 20500);
+			setTimeout(function(){ $('#vid-modal2').modal('hide'); count1 = 0;}, 20500);
+		}
+		if(count >= 121){
+			count1 = 0;
 		}
 	}
 });

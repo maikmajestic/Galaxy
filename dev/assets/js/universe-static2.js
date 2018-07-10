@@ -39,7 +39,10 @@ $( document ).ready(function() {
 		if(count == 16){
 			$('#vid-modal').modal('show');
 			$('#vid-modal video').get(0).play()
-			setTimeout(function(){ $('#vid-modal').removeClass('zoomIn');$('#vid-modal').addClass('fadeOut');$('#vid-modal').modal('hide'); count1 = 0;}, 20500);
+			setTimeout(function(){ $('#vid-modal').modal('hide'); count1 = 0;}, 20500);
+		}
+		if(count >= 40){
+			count1 = 0;
 		}
 	}
 });

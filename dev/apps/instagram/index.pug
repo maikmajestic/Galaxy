@@ -62,9 +62,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_cossio.html")
-                h4.profile-name-link.clickable daniel_cossio
-                  span Los primeros veinte años la institución residió en unos despachos en la sede del Fondo de Cultura Económica, dirigido entonces por Cosío Villegas; después pasó de una casa alquilada a otra, hasta que logró tener un edificio propio al comenzar la década de 1960. En 1976 Víctor Urquidi, presidente de El Colegio de México en esos momentos, supervisó la inauguración del moderno edificio en el cual reside actualmente, siendo uno de sus arquitectos Teodoro González de León.
+              h4.profile-name-link martin_liceaga
+                span Los primeros veinte años la institución residió en unos despachos en la sede del Fondo de Cultura Económica, dirigido entonces por 
+                  a.clickable(href="profile_cossio.html") Cossío Villegas 
+                  | después pasó de una casa alquilada a otra, hasta que logró tener un edificio propio al comenzar la década de 1960. En 1976 Víctor Urquidi, presidente de El Colegio de México en esos momentos, supervisó la inauguración del moderno edificio en el cual reside actualmente, siendo uno de sus arquitectos Teodoro González de León.
             .item-comment-wrapper
               h4.profile-name-link caro_hdz
                 span El Colegio de México es una institución pública, de carácter universitario, dedicada a la investigación y a la enseñanza superior en ciencias sociales y humanidades. Desde su comienzo ha mantenido de forma ininterrumpida sus labores, convirtiéndose en uno de los centros de investigación y docencia más destacados en el mundo hispánico, por lo cual ha recibido numerosos reconocimientos. Actualmente cuenta con la biblioteca más importante de México en humanidades y ciencias sociales, la cual es considerada el centro neurálgico de la institución.
@@ -99,6 +100,13 @@ html
           .col-12.profile-body-pic.mt-3
             //img(src="../../assets/images/instagram/DSC00104.JPG")
             #cardioCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#cardioCarousel', data-slide-to='0')
+                li(data-target='#cardioCarousel', data-slide-to='1')
+                li(data-target='#cardioCarousel', data-slide-to='2')
+                li(data-target='#cardioCarousel', data-slide-to='3')
+                li(data-target='#cardioCarousel', data-slide-to='4')
+                li(data-target='#cardioCarousel', data-slide-to='5')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/DSC00104.JPG')
@@ -131,9 +139,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_chavez.html")
-                h4.profile-name-link ignacio_chavez
-                  span El doctor Chávez fundó el primer servicio de cardiología en el Hospital General de México (1924-1944), del que fue director entre 1936 y 1939. Posteriormente fundó y fue el primer director del Instituto Nacional de Cardiología, el primero en su tipo en el mundo (1944-1961). Fundó y presidió la Sociedad Mexicana de Cardiología (1935), así como también la Sociedad Interamericana de Cardiología (1946). Fue vicepresidente (1958-1962) y presidente honorario vitalicio (a partir de 1962) de la Sociedad Internacional de Cardiología. Ha sido miembro del comité consultivo de la Organización Mundial de la Salud (1955). Perteneció a 18 sociedades de cardiología en América y Europa y recibió incontables condecoraciones y preseas. Mundialmente es respetado como maestro y creador de instituciones.
+              h4.profile-name-link arleth_gomez
+                span 
+                  a.clickable(href="profile_chavez.html") El doctor Chávez 
+                  | fundó el primer servicio de cardiología en el Hospital General de México (1924-1944), del que fue director entre 1936 y 1939. Posteriormente fundó y fue el primer director del Instituto Nacional de Cardiología, el primero en su tipo en el mundo (1944-1961). Fundó y presidió la Sociedad Mexicana de Cardiología (1935), así como también la Sociedad Interamericana de Cardiología (1946). Fue vicepresidente (1958-1962) y presidente honorario vitalicio (a partir de 1962) de la Sociedad Internacional de Cardiología. Ha sido miembro del comité consultivo de la Organización Mundial de la Salud (1955). Perteneció a 18 sociedades de cardiología en América y Europa y recibió incontables condecoraciones y preseas. Mundialmente es respetado como maestro y creador de instituciones.
             .item-comment-wrapper
               h4.profile-name-link ramon_cervantes
                 span Después de 32 años de funcionamiento se muda a las instalaciones actuales, en la zona de Tlalpan, el 17 de octubre de 1976. Desde su fundación el Instituto ha atendido a miles de pacientes con padecimientos cardiovasculares, renales y reumáticos bajo el lema: “El amor y la ciencia al servicio del corazón”.
@@ -145,13 +154,18 @@ html
           img(src="../../assets/images/instagram/nutricion/fachada.jpg")
         .col-9.col-lg-10
           a(href="profile_nutricion.html")
-            h4.profile-name ciencias_medicas
+            h4.profile-name Instituto Nacional de Ciencias Médicas
         .col-1.col-lg-1.text-right
           i.fas.fa-ellipsis-h
         .row
           .col-12.profile-body-pic.mt-3
             //img(src="../../assets/images/instagram/nutricion/inn2.jpg")
             #cienciasCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#cienciasCarousel', data-slide-to='0')
+                li(data-target='#cienciasCarousel', data-slide-to='1')
+                li(data-target='#cienciasCarousel', data-slide-to='2')
+                li(data-target='#cienciasCarousel', data-slide-to='3')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/nutricion/inn2.jpg')
@@ -180,9 +194,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_donato.html")
-                h4.profile-name-link donato_alarcon
-                  span Fue jefe del Departamento de Inmunología y Reumatología del Instituto Nacional de Ciencias Médicas y Nutrición "Salvador Zubirán" (1966-1992), y director general del Instituto (1992-2002); a partir de entonces volvió a su puesto de Investigador Titular "C". Fue profesor visitante en distintas universidades de Estados Unidos de Norteamérica, América Latina, Europa y Asia. Perteneció a cincuenta sociedades científicas y fue miembro honorario de 21 de ellas. Fue secretario adjunto de la Academia Nacional de Medicina en 1973, secretario de la Sociedad Mexicana de Reumatología entre 1974-1976, y presidente de la misma entre 1976-1978. 
+              h4.profile-name-link mario_hdz
+                span 
+                  a.clickable(href="profile_donato.html") Donato Alarcón 
+                  | fue jefe del Departamento de Inmunología y Reumatología del Instituto Nacional de Ciencias Médicas y Nutrición "Salvador Zubirán" (1966-1992), y director general del Instituto (1992-2002); a partir de entonces volvió a su puesto de Investigador Titular "C". Fue profesor visitante en distintas universidades de Estados Unidos de Norteamérica, América Latina, Europa y Asia. Perteneció a cincuenta sociedades científicas y fue miembro honorario de 21 de ellas. Fue secretario adjunto de la Academia Nacional de Medicina en 1973, secretario de la Sociedad Mexicana de Reumatología entre 1974-1976, y presidente de la misma entre 1976-1978. 
             .item-comment-wrapper
               h4.profile-name-link javier_durán
                 span En 1966, Donato Alarcón Segovia, fundaría el Departamento de Genética, Inmunología y Reumatología en el instituto y fue su director general de 1992 al 2002.  Fue aquí en 1983 donde se diagnosticó del primer caso de VIH SIDA en el país y se construye el Centro de Referencia para la atención e investigación de este síndrome
@@ -197,12 +212,25 @@ html
           img(src="../../assets/images/instagram/demograficos/666A0004.jpg")
         .col-9.col-lg-10
           a(href="profile_demograficos.html")
-            h4.profile-name cee
+            h4.profile-name Centro de Estudios Económicos y Demográficos
         .col-1.col-lg-1.text-right
           i.fas.fa-ellipsis-h
         .row
           .col-12.profile-body-pic.mt-3
             #ceeCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#ceeCarousel', data-slide-to='0')
+                li(data-target='#ceeCarousel', data-slide-to='1')
+                li(data-target='#ceeCarousel', data-slide-to='2')
+                li(data-target='#ceeCarousel', data-slide-to='3')
+                li(data-target='#ceeCarousel', data-slide-to='4')
+                li(data-target='#ceeCarousel', data-slide-to='5')
+                li(data-target='#ceeCarousel', data-slide-to='6')
+                li(data-target='#ceeCarousel', data-slide-to='7')
+                li(data-target='#ceeCarousel', data-slide-to='8')
+                li(data-target='#ceeCarousel', data-slide-to='9')
+                li(data-target='#ceeCarousel', data-slide-to='10')
+                li(data-target='#ceeCarousel', data-slide-to='11')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/demograficos/666A0004.jpg')
@@ -247,9 +275,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_cabrera.html")
-                h4.profile-name-link gustavo_cabrera
-                  span Su labor académica se inició como profesor de la UNAM (1961-1972), e ingresó en 1964 a El Colegio de México como profesor-investigador. En esta institución fue director del Centro de Estudios Económicos y Demográficos (1970-1976), asesor del Fondo de Población de la ONU, de la OMS y de la UNESCO, así como también presidente del Programa de Investigaciones sobre Políticas de Población de América Latina (1975-1976) y director del actual Centro de Estudios Demográficos y de Desarrollo Urbano (1991-1996). Fue profesor visitante en diversas universidades de América Latina, Estados Unidos y Europa. Su obra publicada incluye más de 60 artículos; es autor, coautor y editor de cinco libros y realizó cerca de 80 contribuciones en congresos y conferencias nacionales e internacionales.
+              h4.profile-name-link javier_glez
+                span La labor académica de 
+                  a.clickable(href="profile_cabrera.html") Gustavo Cabrera 
+                  | se inició como profesor de la UNAM (1961-1972), e ingresó en 1964 a El Colegio de México como profesor-investigador. En esta institución fue director del Centro de Estudios Económicos y Demográficos (1970-1976), asesor del Fondo de Población de la ONU, de la OMS y de la UNESCO, así como también presidente del Programa de Investigaciones sobre Políticas de Población de América Latina (1975-1976) y director del actual Centro de Estudios Demográficos y de Desarrollo Urbano (1991-1996). Fue profesor visitante en diversas universidades de América Latina, Estados Unidos y Europa. Su obra publicada incluye más de 60 artículos; es autor, coautor y editor de cinco libros y realizó cerca de 80 contribuciones en congresos y conferencias nacionales e internacionales.
             .item-comment-wrapper
               h4.profile-name-link juan_alvarez
                 span Debido a un aumento considerable en la demanda estudiantil y en las actividades del CEED, en 1981 se aprobó su división en dos nuevos centros: El Centro de Estudios Económicos (CEE), y el Centro de Estudios Demográficos y de Desarrollo Urbano (CEDDU). 
@@ -280,13 +309,17 @@ html
           img(src="../../assets/images/instagram/indre/1.png")
         .col-9.col-lg-10
           a(href="profile_indre.html")
-            h4.profile-name iset
+            h4.profile-name Instituto de Salubridad y Enfermedades Tropicales
         .col-1.col-lg-1.text-right
           i.fas.fa-ellipsis-h
         .row
           .col-12.profile-body-pic.mt-3
             //img(src="../../assets/images/instagram/indre/3.png")
             #isetCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#isetCarousel', data-slide-to='0')
+                li(data-target='#isetCarousel', data-slide-to='1')
+                li(data-target='#isetCarousel', data-slide-to='2')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/indre/3.png')
@@ -313,9 +346,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_manuel.html")
-                h4.profile-name-link manuel_martinez
-                  span Fue miembro y presidente (1940 a 1942) de la Academia Nacional de Medicina, de la Sociedad Mexicana de Higiene, de la Sociedad Mexicana de Historia Natural y Miembro Honorario de la Academia de Medicina de Nueva York, entre muchos otros honores y distinciones. Escribió además unos 100 artículos sobre salud pública, parasitología y anatomía patológica.
+              h4.profile-name-link nancy_ayala
+                span
+                  a.clickable(href="profile_manuel.html") Manuel Martínez 
+                  | fue miembro y presidente (1940 a 1942) de la Academia Nacional de Medicina, de la Sociedad Mexicana de Higiene, de la Sociedad Mexicana de Historia Natural y Miembro Honorario de la Academia de Medicina de Nueva York, entre muchos otros honores y distinciones. Escribió además unos 100 artículos sobre salud pública, parasitología y anatomía patológica.
             .item-comment-wrapper
               h4.profile-name-link raul_garcia
                 span El Instituto inició actividades en 1938 y fue formalmente inaugurado el 18 de marzo de 1939, con motivo del primer aniversario de la expropiación petrolera, entonces con el Dr. Martínez Báez como director. El ISET marcó un parteaguas en la salud pública del país ya que, por primera vez, se incluyó a la investigación científica en el programa de labores del Departamento de Salubridad.
@@ -346,13 +380,20 @@ html
           img(src="../../assets/images/instagram/psiquiatria/01Actual2.JPG")
         .col-9.col-lg-10
           a(href="profile_psiq.html")
-            h4.profile-name instituto_psiquiatria
+            h4.profile-name Instituto Nacional de Psiquiatría
         .col-1.col-lg-1.text-right
           i.fas.fa-ellipsis-h
         .row
           .col-12.profile-body-pic.mt-3
             //img(src="../../assets/images/instagram/psiquiatria/01Actual3[2].JPG")
             #psiqCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#psiqCarousel', data-slide-to='0')
+                li(data-target='#psiqCarousel', data-slide-to='1')
+                li(data-target='#psiqCarousel', data-slide-to='2')
+                li(data-target='#psiqCarousel', data-slide-to='3')
+                li(data-target='#psiqCarousel', data-slide-to='4')
+                li(data-target='#psiqCarousel', data-slide-to='5')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/psiquiatria/01Actual3[2].JPG')
@@ -385,9 +426,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_ramon.html")
-                h4.profile-name-link ramon_delafuente
-                  span Fue miembro fundador de la Sociedad Mexicana de Psicoanálisis (1956), y presidente de la misma (1967-1969); miembro fundador de la Asociación Psiquiátrica Mexicana, y posteriormente presidente de la misma (1967-1969).
+              h4.profile-name-link gaby_herrera
+                span
+                  a.clickable(href="profile_ramon.html") Ramón de la Fuente 
+                  | fue miembro fundador de la Sociedad Mexicana de Psicoanálisis (1956), y presidente de la misma (1967-1969); miembro fundador de la Asociación Psiquiátrica Mexicana, y posteriormente presidente de la misma (1967-1969).
             .item-comment-wrapper
               h4.profile-name-link brenda_mtz
                 span Desde sus inicios se visualizó al Instituto Nacional de Psiquiatría como organismo enfocado en el estudio de desórdenes mentales. Fue concebido por su fundador como una institución capaz de transformar nuestra manera de entender la enfermedad mental a partir de la investigación, de la traducción de los hallazgos científicos en programas, en mejores prácticas para la prevención de la enfermedad, en la atención de las personas que enferman, en recomendaciones para las políticas públicas, así como también en la formación de profesionales de la salud mental.
@@ -419,13 +461,20 @@ html
           img(src="../../assets/images/instagram/cimat/Antigua_Exterior_CIMAT.JPG")
         .col-9.col-lg-10
           a(href="profile_cimat.html")
-            h4.profile-name cimat
+            h4.profile-name Centro de Investigación de Matemáticas
         .col-1.col-lg-1.text-right
           i.fas.fa-ellipsis-h
         .row
           .col-12.profile-body-pic.mt-3
             //img(src="../../assets/images/instagram/cimat/Antigua_Interior_CIMAT.JPG")
             #cimatCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#cimatCarousel', data-slide-to='0')
+                li(data-target='#cimatCarousel', data-slide-to='1')
+                li(data-target='#cimatCarousel', data-slide-to='2')
+                li(data-target='#cimatCarousel', data-slide-to='3')
+                li(data-target='#cimatCarousel', data-slide-to='4')
+                li(data-target='#cimatCarousel', data-slide-to='5')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/cimat/Actual_Exterior_CIMAT.jpg')
@@ -458,9 +507,10 @@ html
         .row.comments-wrapper.mt-3
           .col-12
             .item-comment-wrapper
-              a(href="profile_pena.html")
-                h4.profile-name-link jose_antonio
-                  span Su trabajo ha destacado por contribuir a la comprensión de las álgebras mansas y la estructura de las categorías de módulos asociadas por medio de las formas cuadráticas, por el que se le otorgó el Premio twas de la Academia de Ciencias del Tercer Mundo. En años recientes ha incursionado en la teoría espectral de gráficas y aplicaciones en químico-matemáticas, área acerca de la cual ha publicado alrededor de 30 artículos en revistas arbitradas, y en la que destaca la obtención de fórmulas estructurales para moléculas de hidrocarburos en tres dimensiones.
+              h4.profile-name-link manuel_diaz
+                span El trabajo de 
+                  a.clickable(href="profile_pena.html") José Antonio de la Peña 
+                  | ha destacado por contribuir a la comprensión de las álgebras mansas y la estructura de las categorías de módulos asociadas por medio de las formas cuadráticas, por el que se le otorgó el Premio twas de la Academia de Ciencias del Tercer Mundo. En años recientes ha incursionado en la teoría espectral de gráficas y aplicaciones en químico-matemáticas, área acerca de la cual ha publicado alrededor de 30 artículos en revistas arbitradas, y en la que destaca la obtención de fórmulas estructurales para moléculas de hidrocarburos en tres dimensiones.
             .item-comment-wrapper
               h4.profile-name-link sam_gamboa
                 span Desde entonces su actividad académica se ha diversificado e incrementado hasta convertir al Centro en la institución de investigación más importante en su especialidad en el interior de la República Mexicana. De ello dan cuenta el alto nivel académico de sus investigadores; su vasta producción científica arbitrada; su cada vez más creciente participación en el escenario científico internacional y sus programas de licenciatura, maestría y doctorado con reconocimiento de excelencia internacional.
@@ -494,13 +544,20 @@ html
           img(src="../../assets/images/instagram/conabio/conabio2.jpg")
         .col-9.col-lg-10
           a(href="profile_conabio.html")
-            h4.profile-name conabio
+            h4.profile-name Comisión Nacional para el Conocimiento y Uso de la Biodiversidad
         .col-1.col-lg-1.text-right
           i.fas.fa-ellipsis-h
         .row
           .col-12.profile-body-pic.mt-3
             //img(src="../../assets/images/instagram/conabio/IMG_9344.JPG")
             #conabioCarousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#conabioCarousel', data-slide-to='0')
+                li(data-target='#conabioCarousel', data-slide-to='1')
+                li(data-target='#conabioCarousel', data-slide-to='2')
+                li(data-target='#conabioCarousel', data-slide-to='3')
+                li(data-target='#conabioCarousel', data-slide-to='4')
+                li(data-target='#conabioCarousel', data-slide-to='5')
               .carousel-inner
                 .carousel-item.active
                   img.d-block.w-100(src='../../assets/images/instagram/conabio/_MG_3811.jpg')
@@ -532,10 +589,11 @@ html
               strong 9k Me gusta
         .row.comments-wrapper.mt-3
           .col-12
-            .item-comment-wrapper
-              a(href="profile_sarukhan.html")
-                h4.profile-name-link sarukhan
-                  span Durante los últimos años ha sido investigador, primero del Instituto de Biología de la UNAM y, desde 1986, del Instituto de Ecología, del cual es fundador. Además de sus labores de investigación, que sin duda han hecho que Sarukhán sea considerado como uno de los ecólogos latinoamericanos con mayor reconocimiento académico, ha planeado e integrado el grupo de ecología del Instituto de Biología, que cuenta con el primer proyecto de posgrado de la especialidad en el país. En 1992 fundó, con apoyo gubernamental, la Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (Conabio), de la cual funge, de forma honoraria, como Coordinador Nacional por designación presidencial desde su inicio. Se desempeñó como rector de la Universidad Nacional Autónoma de México de 1989 a 1997.
+            .item-comment-wrapper              
+              h4.profile-name-link gilberto_sosa
+                span Durante los últimos años 
+                  a.clickable(href="profile_sarukhan.html") José Sarukhan 
+                  | ha sido investigador, primero del Instituto de Biología de la UNAM y, desde 1986, del Instituto de Ecología, del cual es fundador. Además de sus labores de investigación, que sin duda han hecho que Sarukhán sea considerado como uno de los ecólogos latinoamericanos con mayor reconocimiento académico, ha planeado e integrado el grupo de ecología del Instituto de Biología, que cuenta con el primer proyecto de posgrado de la especialidad en el país. En 1992 fundó, con apoyo gubernamental, la Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (Conabio), de la cual funge, de forma honoraria, como Coordinador Nacional por designación presidencial desde su inicio. Se desempeñó como rector de la Universidad Nacional Autónoma de México de 1989 a 1997.
               h4.profile-name-link jaime_hdz
                 span Desde entonces, la CONABIO se estableció como una comisión intersecretarial de carácter permanente. Participan en ella diez secretarías, siendo el presidente de la Comisión el titular del Ejecutivo Federal.  Su misión es promover, coordinar, apoyar y realizar actividades dirigidas al conocimiento de la diversidad biológica, así como a su conservación y uso sustentable para beneficio de la sociedad.
             .item-comment-wrapper

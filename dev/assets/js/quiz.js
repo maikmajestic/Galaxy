@@ -44,7 +44,6 @@ $( document ).ready(function() {
 			$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
 		}
 		if(localStorage.errorQ >= 3){
-			localStorage.setItem("answersQ", 0);
 			localStorage.setItem("successQ", 0);
 			localStorage.setItem("errorQ", 0);
 			//$('#price').toggle('modal');
@@ -67,9 +66,13 @@ $( document ).ready(function() {
 			localStorage.setItem("successQ", 3);
 			var code = Math.floor(Math.random() * 101);
 			$('.code-price').text('PLURAL-2018-'+code);
-			$('.price-wrapper').show();
-			$('#price').toggle('modal');
-			$('body').css('pointer-events', 'none');
+			if(localStorage.answersQ != 1){
+				$('.price-wrapper').show();
+				$('#price').toggle('modal');
+				$('body').css('pointer-events', 'none');
+				localStorage.setItem("answersQ", 1);
+				setTimeout(function(){ localStorage.setItem("answersQ", 0); }, 300000);
+			}
 		}
 	}
 
@@ -82,9 +85,11 @@ $( document ).ready(function() {
 		}
 		if(errorQ == 3){
 			localStorage.setItem("errorQ", 3);
-			$('#error-modal').toggle('modal');
-			$('.error-wrapper').show();
-			$('body').css('pointer-events', 'none');
+			if(localStorage.answersQ != 1){
+				$('#error-modal').toggle('modal');
+				$('.error-wrapper').show();
+				$('body').css('pointer-events', 'none');
+			}
 		}
 	}
 
@@ -93,7 +98,6 @@ $( document ).ready(function() {
 	});
 
 	$('.btn-accept').on('click', function(){
-		$(this).parents('.modal').toggle('modal');
 		location.reload(true);
 	});
 
