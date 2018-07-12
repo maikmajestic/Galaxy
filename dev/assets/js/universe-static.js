@@ -72,15 +72,28 @@ $( document ).ready(function() {
 		 event.preventDefault();
 	 }
  });
-$( ".star" ).animate({
+
+ setTimeout(function(){ $('.star').show();$('.star').css('right', '-210px');$('.star').css('top', '-120px');$( ".star" ).animate({
 		opacity: 1,
     right: "100%",
     top: "100%"
   }, 6000, function() {
     // Animation complete.
-  });
+  }); }, 3600000);
+
 $('.star').on('click', function(){
-	alert('nepe');
+	var code = Math.floor(Math.random() * 5000);
+	$('.code-price').text('PLURAL-2018-'+code);
+	$('.star').stop();
+	$('.code-wrapper').show();
+	setTimeout(function(){ $('.star').hide(); }, 10000);
+	setTimeout(function(){ $('.star').show();$('.code-wrapper').hide();$('.star').css('right', '-210px');$('.star').css('top', '-120px');$( ".star" ).animate({
+		opacity: 1,
+    right: "100%",
+    top: "100%"
+  }, 6000, function() {
+    // Animation complete.
+  }); }, 3600000);
 })
 
 });
