@@ -4,6 +4,7 @@ $( document ).ready(function() {
 	$('.object').on('click', function(){
 		var info = $(this).data('info');
 		var direction = $(this).data('direction');
+		$(this).find('.image').css('opacity', '0.5');
 		if(direction == 'up'){
 			$(info).addClass('animated');
 			$(info).addClass('fadeInDown');	
@@ -12,7 +13,7 @@ $( document ).ready(function() {
 			$(info).addClass('animated');
 			$(info).addClass('fadeInUp');	
 		}
-		$(info).css('opacity', 1);
+		$(info).show();
 		if(info == '#m82-info'){
 			count1 = count1 + 2;
 		}
@@ -28,10 +29,16 @@ $( document ).ready(function() {
 		checkPass(count1);
 	});
 
-	$('.info-wrapper i').on('click', function(){
+	/*$('.info-wrapper i').on('click', function(){
 		$(this).parents('.info-wrapper').removeClass('animated');
 		$(this).parents('.info-wrapper').removeClass('fadeInDown');
 		$(this).parents('.info-wrapper').css('opacity', 0);
+	});*/
+	$('.icon-close').on('click', function(){
+		$(this).parents('.info-wrapper2').removeClass('animated');
+		$(this).parents('.info-wrapper2').removeClass('fadeInDown');
+		$(this).parents('.col').find('.image').css('opacity', '1');
+		$(this).parents('.info-wrapper2').hide();
 	});
 
 	function checkPass(count){
