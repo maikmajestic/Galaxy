@@ -3,7 +3,7 @@ body
 .main-quiz
 	background url('../images/quiz/deepred_BG.png') no-repeat center center fixed
 	background-size cover
-	padding-top 3%
+	padding-top 2%
 	min-height 100%
 #main-quotes
 	padding-top 10%
@@ -74,17 +74,18 @@ body
 	color #000
 	background rgba(255, 255, 255, .5)
 	border-radius 20px
+	display block
 	font-size 2em
 	font-weight bolder
 	margin 20px 0
 	padding 20px 15px
-	a
+	text-decoration none
+	&:after
 		color #000
+		text-decoration none
 .restart-wrapper
 	color #fff
-	position absolute
-	bottom 5%
-.btn-restart
+.btn-restart, .btn-accept
 	background none
 	border 1px solid #fff
 	border-radius 20px
@@ -92,7 +93,10 @@ body
 	display none
 	font-family 'Dosis', sans-serif
 	font-size 25px
+	margin-top 20px
 	padding 5px 40px
+.btn-accept
+	display block
 .go-back
 	opacity 0.9
 	
@@ -103,6 +107,8 @@ body
 		bottom initial
 	.go-back
 		text-align right
+	.answers-result
+		padding-left 7%
 #start-screen
 	padding-top 16%
 .go-back
@@ -118,17 +124,55 @@ body
 	i.active
 		color green
 		opacity 1
+	i.error
+		color #f00
+		opacity 1
 .code-body
 	color #fff
 	font-size 2em
 	line-height 1
 .code-price
-	color #fff
+	color green
 	font-size 3em
 	font-weight bolder
 #price
 	margin-top 25%
 	.modal-body
 		background #000
-		border 10px solid #fff
+		opacity 0.8
 		padding 50px
+.game-title
+	color #fff
+	font-size 2em
+#answer-modal, #error-modal
+	margin-top 21%
+	.modal-body
+		background #000
+		color #fff
+		opacity 0.9
+		padding 50px
+	.modal-dialog
+		height 500px
+		max-width 1000px
+	h2
+		margin-top 10%
+		text-decoration underline
+.wt-data
+	font-size 1.5em
+	line-height 1
+	margin-top 30px
+.price-wrapper, .error-wrapper
+	display none
+	h2
+		margin-top 0%!important
+	h2.error
+		color #f00
+#main-quotes, #semblant
+	.error-wrapper
+		h2
+			margin-top 10%!important
+	#price
+		.code-body
+			margin-top 50px
+		.btn-accept
+			color #fff

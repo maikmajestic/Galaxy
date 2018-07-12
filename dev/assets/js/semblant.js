@@ -1,7 +1,52 @@
 $( document ).ready(function() {
 
+	if(localStorage.answersS){
+		if(localStorage.answersS == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersS == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersS == 3){
+    		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersS", 0);
+    	}
+	}
+	else{
+		localStorage.setItem("answersS", 0);
+	}
+
+	function checkAnswers(answersS){
+		if(answersS <= 0){
+			answersS = 0;
+			localStorage.setItem("answersS", 0);
+		}
+		else if(answersS == 3){
+			localStorage.setItem("answersS", 3);
+			var code = Math.floor(Math.random() * 101);
+			$('.code-price').text('PLURAL-2018-'+code);
+			$('#price').toggle('modal');
+			setTimeout(function(){ location.reload(true) }, 20000);
+		}
+		else if(answersS > 3){
+			answersS = 0;
+			localStorage.setItem("answersS", 0);
+		}
+		else{
+			answersS = answersS;
+			localStorage.setItem("answersS", answersS);
+		}
+	}
+
 	$('.go-back').on('click', function(){
 		window.location.href = "index.html";
+	});
+
+	$('.btn-accept').on('click', function(){
+		$(this).parents('.modal').toggle('modal');
 	});
 
 	var semblant = ['Entre sus novelas destacan Al filo del agua, considerada la culminación de la novela de la Revolución; Ojerosa y pintada; Las tierras flacas, Las vueltas del tiempo  y La ladera dorada.  Se le sitúa entre los novelistas de la Revolución, pero se trata de un cultivador del estilo literario y un renovador de la estructura literaria.', 
@@ -18,7 +63,7 @@ $( document ).ready(function() {
 	'En 1991, recibió el Premio Xavier Villaurrutia por El ángel es vampiro. Por el conjunto de su obra, recibió en 2011 el Premio Iberoamericano de Poesía Ramón López Velarde, otorgado anualmente a quien dedica sus afanes a la creación poética o a su estudio y difusión.', 
 	'Tomó expresiones de la cultura popular para convertirlas en poesía, y la intensidad la interpretó de una manera limpia, sincera, sin caídas ni sentimentalismos. Fue además, el gran traductor de los clásicos griegos y latinos.',
 	'En su narrativa hay tres vertientes: los grandes frescos que muestran el carácter nacional (La región más transparente, La muerte de Artemio Cruz); los más íntimos, que ahondan en el carácter individual (Aura,Cantar de ciegos), y el que desentraña hechos políticos (La Silla del Águila, La cabeza de la hidra). ', 
-	'Dirigió con Carlos Monsiváis el suplemento de la revista Estaciones y el suplemento del diario Novedades. En su poesía recogió lo mejor de la tradición con la experimentación, además de un profundo amor a sus semejantes y a la Ciudad de México. En su narrativa hay una preocupación por la singularidad de la niñez y en su periodismo difunde las virtudes de los héroes y los momentos decisivos en la historia del país.', 
+	'Dirigió con Carlos Monsiváis el suplemento de la revista Estaciones y el suplemento del diario Novedades. En su poesía recogió lo mejor de la tradición con la experimentación, además de un profundo amor a sus semejantes y a la Ciudad de México. En su narrativa hay una preocupación por la singularidad de la niñez y en su periodismo difunde las virtudes de los héroes y los momentos decisivos en la historia del país.', 
 	'Fue director de la revista Plural y después, fundador y director, hasta su muerte, de la revista Vuelta. Fue además, el primer poeta e intelectual mexicano que ha sido distinguido con el Premio Nobel de Literatura. Es uno de los más grandes escritores del siglo XX; renovador de la poesía,  que analizó la política y la sociedad mexicana contemporánea.', 
 	'Fue secretario de la Escuela Nacional de Altos Estudios. Conoció a Pedro Henríquez Ureña, Antonio Caso y José Vasconcelos y juntos, formaron el Ateneo de la Juventud. Fue varias veces candidato al Premio Nobel, sin éxito.'];
 	var writters = ['../../assets/images/quiz/escritores/AgustinYanez.png', 
@@ -89,15 +134,48 @@ $( document ).ready(function() {
 	$('.option-riddle').on('click', function(){
 		var option = $(this).data('option');
 		console.log(option);
+		var answersS = parseInt(localStorage.getItem("answersS"));
 		if(option == opt){
+			answersS=answersS+1;
+			checkAnswers(answersS);
+    	console.log(localStorage.answersS);
+    	if(localStorage.answersS == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersS == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersS == 3){
+    		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersS", 0);
+    	}
 				$(this).addClass('active');
 				$(this).append('<h3 class="text-white">Respuesta correcta</h3>');
 				$('.option-riddle').css('pointer-events', 'none');
 				$('.btn-restart').show();
 				setTimeout(function(){ $('.option-wrap').hide();$('.option-wrap.active').fadeIn(); }, 100);
-				setTimeout(function(){ location.reload(true) }, 15000);
+				//setTimeout(function(){ location.reload(true) }, 15000);
 		}
 		else{
+			answersS=answersS-1;
+			checkAnswers(answersS);
+    	console.log(localStorage.answersS);
+    	if(localStorage.answersS == 1){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    	}
+    	else if(localStorage.answersS == 2){
+    		$('.answers-result i').removeClass('active');
+    		$('.answers-result i').first().addClass('active');
+    		$('.answers-result i:nth-child(2)').addClass('active');
+    	}
+    	else if(localStorage.answersS == 3){
+    		$('.answers-result i').addClass('active');
+    		localStorage.setItem("answersS", 0);
+    	}
 			$(this).addClass('error');
 			$(this).find('i').removeClass('fa-check-circle');
 			$(this).find('i').addClass('fa-times');
@@ -105,7 +183,7 @@ $( document ).ready(function() {
 			$('.option-riddle').css('pointer-events', 'none');
 			$('.btn-restart').show();
 			setTimeout(function(){ $('.option-wrap').hide();$('.option-wrap.error').fadeIn(); }, 100);
-			setTimeout(function(){ location.reload(true) }, 15000);
+			//setTimeout(function(){ location.reload(true) }, 15000);
 		}
 	});
 });

@@ -9,15 +9,20 @@ html
     link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
     link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
   body
-    .container-fluid.main-instagram
+    .container-fluid.main-instagram#profile
       .row.align-items-center.header-instagram
-        h4.title-insta Perfil
+        .col-2.back-i.text-center
+          i.fas.fa-chevron-left
+        .col
+          h4.title-insta Perfil
+        .col-2.text-center
+          i.fas.fa-undo
       .row.align-items-center.header-profile
         .col-3.img-profile
           img(src="../../assets/images/instagram/colmex/Colmex-Ajusco3.jpg")
         .col-9
           a(href="#")
-            h3.name-profile col_mex
+            h3.name-profile El Colegio de México
               i.fas.fa-ellipsis-h
           .row
             .col-10
@@ -28,8 +33,10 @@ html
       .row.align-items-center.descrip-profile
         .col-12
           p.description 
-            strong El Colegio de México
-            | Dada la difícil situación que cruzaba España durante su guerra civil (1936 – 1939), Daniel Cosío Villegas, historiador y economista, propone al presidente Lázaro Cárdenas un proyecto para acoger temporalmente en México a académicos, científicos y artistas españoles cuya integridad física peligraba. Bajo esta intención, el presidente Cárdenas emitió un decreto en 1938 para fundar La Casa de España en México, centro que daría nacimiento en 1940 a El Colegio de México. 
+            strong El Colegio de México 
+            | Dada la difícil situación que cruzaba España durante su guerra civil (1936 – 1939), 
+            a.clickable(href="profile_cossio.html") Daniel Cosío Villegas, 
+            | historiador y economista, propone al presidente Lázaro Cárdenas un proyecto para acoger temporalmente en México a académicos, científicos y artistas españoles cuya integridad física peligraba. Bajo esta intención, el presidente Cárdenas emitió un decreto en 1938 para fundar La Casa de España en México, centro que daría nacimiento en 1940 a El Colegio de México. 
           p.followers-names alberto_chung 
             span y 
             | chuchis_mercado

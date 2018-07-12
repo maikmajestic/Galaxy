@@ -5,6 +5,14 @@ html
 		link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
 		link(rel="stylesheet" type="text/css" href="../../assets/css/universe.css")
 	body
+		//#vid-modal.modal.fade(data-backdrop="true", tabindex='-1', role='dialog', aria-labelledby='vidModalLabel', aria-hidden='true')
+				.modal-dialog(role='document')
+					.modal-content
+						.modal-body.text-center
+							.row.align-items-center.justify-content-center.pt-3
+								.col
+									video(width="100%" autoplay loop)
+										source(src="../../assets/videos/galaxy/gems.mov" type="video/mp4")
 		.container-fluid.wrapper-universe
 			.row.justify-content-center.pl-3
 				.col.p-0
@@ -13,36 +21,26 @@ html
 							img(src="../../assets/images/GALAXIAM8015FRAMES.gif")
 							img.line(src="../../assets/images/neon-line.png")
 				.col.p-0
-					.object.m80
-						.image
 				.col.p-0
 					.object.h11
 						.image
 							img(src="../../assets/images/haro11_15frames.gif")
 				.col.p-0
-					.object.m80
-						.image
 				.col.p-0
 					.object.h44
 						.image
 							img(src="../../assets/images/haro44_15frames.gif")
 				.col.p-0
-					.object.m80
-						.image
 				.col.p-0
 					.object.h47
 						.image
 							img(src="../../assets/images/haro47_15frames.gif")
 				.col.p-0
-					.object.m80
-						.image
 				.col.p-0
 					.object.m59
 						.image
 							img(src="../../assets/images/m59_15frames.gif")
 				.col.p-0
-					.object.m80
-						.image
 			.row.justify-content-center.pl-3
 				.col.p-0
 					.object.info-wrapper.info-m80
@@ -84,5 +82,13 @@ html
 					.object.comet
 						.image
 							img(src="../../assets/images/Cometa.gif")
+			#vid-modal.modal.fade.animated.flash(data-backdrop="true", tabindex='-1', role='dialog', aria-labelledby='vidModalLabel', aria-hidden='true')
+				.modal-dialog(role='document')
+					.modal-content
+						.modal-body.text-center
+							.row.align-items-center.justify-content-center.pt-3
+								.col
+									video(width="100%" autoplay loop)
+										source(src="../../assets/videos/galaxy/gems.mov" type="video/mp4")
 		script(type="text/javascript" src="../../assets/lib/jquery-3.2.1.min.js")
 		script(src='../../assets/js/universe.js')

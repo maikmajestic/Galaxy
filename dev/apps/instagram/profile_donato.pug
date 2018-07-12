@@ -1,0 +1,68 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        .col-2.back-i.text-center
+          i.fas.fa-chevron-left
+        .col
+          h4.title-insta Foto
+        .col-2.text-center
+          i.fas.fa-undo
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="#")
+            img(src="../../assets/images/instagram/nutricion/PedroHiriart_Donato.jpeg")
+        .col-9
+          a(href="profile.html")
+            h3.name-profile-photo Donato Alarcón
+          h3.location-profile 
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/nutricion/PedroHiriart_Donato.jpeg")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 1k 
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link donato_alarcon
+              span Fue jefe del Departamento de Inmunología y Reumatología del Instituto Nacional de Ciencias Médicas y Nutrición "Salvador Zubirán" (1966-1992), y director general del Instituto (1992-2002); a partir de entonces volvió a su puesto de Investigador Titular "C". Fue profesor visitante en distintas universidades de Estados Unidos de Norteamérica, América Latina, Europa y Asia. Perteneció a cincuenta sociedades científicas y fue miembro honorario de 21 de ellas. Fue secretario adjunto de la Academia Nacional de Medicina en 1973, secretario de la Sociedad Mexicana de Reumatología entre 1974-1976, y presidente de la misma entre 1976-1978. 
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')

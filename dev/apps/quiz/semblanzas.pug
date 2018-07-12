@@ -9,16 +9,19 @@ html
     link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
     link(rel="stylesheet" type="text/css" href="../../assets/css/quiz.css")
   body
-    .container-fluid.main-quiz
+    .container-fluid.main-quiz#semblant
       .row.align-items-center.pt-5
         .col-4.go-back.text-white.pl-5
           i.far.fa-arrow-alt-circle-left
           span Elegir otro juego
-        .col-4
+        .col-4.game-title.text-center
+          span Elige de qué escritor hablamos
         .col-4.answers-result.text-right.pr-5
-          i.fas.fa-check-circle
-          i.fas.fa-check-circle
-          i.fas.fa-check-circle
+          i.far.fa-circle
+          i.far.fa-circle
+          i.far.fa-circle
+          i.far.fa-circle
+          i.far.fa-circle
       .row.align-items-center.justify-content-center.pt-5
         .col-8.col-offset-2.text-center
           h4.text-white.riddle-text 
@@ -43,6 +46,27 @@ html
           i.fas.fa-check-circle
       .row.align-items-center.justify-content-center
         .col.text-center.restart-wrapper
-          button.btn-restart Jugar de nuevo
+          button.btn-restart Siguiente
+      #price.modal.fade.animated.flash(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-body.text-center
+              p.code-body Has acertado en 3 ocasiones y te has ganado un libro, copia el código y acude a canjearlo en el stand al final de la exposición.
+              p.code-price
+              .row.align-items-center.justify-content-center.pt-3
+                .col
+                  a.btn-accept Aceptar
+      #error-modal.modal.fade.animated.flash(data-backdrop="true", tabindex='-1', role='dialog', aria-labelledby='errorModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-body.text-center
+              .row.align-items-center.justify-content-center.pt-3
+                .col-8
+                  .error-wrapper
+                    h2.error ¡Has perdido!
+                    p.code-body Has errado en 3 ocasiones, intenta más tarde.
+              .row.align-items-center.justify-content-center.pt-3
+                .col-4
+                  a.btn-accept Aceptar
     script(src="../../assets/lib/jquery-3.2.1.min.js")
-    script(src='../../assets/js/semblant.js')
+    script(src='../../assets/js/semblant2.js')

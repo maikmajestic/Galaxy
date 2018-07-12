@@ -1,0 +1,68 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
+    link(href="https://fonts.googleapis.com/css?family=La+Belle+Aurore" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
+    link(rel="stylesheet" type="text/css" href="../../assets/css/instagram.css")
+  body
+    .container-fluid.main-instagram#photo
+      .row.align-items-center.header-instagram
+        .col-2.back-i.text-center
+          i.fas.fa-chevron-left
+        .col
+          h4.title-insta Foto
+        .col-2.text-center
+          i.fas.fa-undo
+      .row.align-items-center.header-photo
+        .col-1.pr-0.img-photo
+          a(href="#")
+            img(src="../../assets/images/instagram/conabio/sarukhan.png")
+        .col-9
+          a(href="#")
+            h3.name-profile-photo José Sarukhán
+          h3.location-profile 
+        .col-2.text-right
+          i.fas.fa-ellipsis-h.more-photo
+      .row.align-items-center.photo-profile
+        img(src="../../assets/images/instagram/conabio/sarukhan.png")
+      .row.icons-wrapper
+        .col-4.col-lg-3.icons-left
+          i.far.fa-heart.like
+          i.far.fa-comment.comment
+        .col-8.col-lg-9.text-right.pr-0
+          i.far.fa-bookmark.bookmark
+      .row.likes-wrapper
+        .col-12
+          h4 
+            strong 1k 
+              span Me gusta
+      .row.comments-wrapper.mt-3
+        .col-12
+          .item-comment-wrapper
+            h4.profile-name-link sarukhan
+              span Durante los últimos años ha sido investigador, primero del Instituto de Biología de la UNAM y, desde 1986, del Instituto de Ecología, del cual es fundador. Además de sus labores de investigación, que sin duda han hecho que Sarukhán sea considerado como uno de los ecólogos latinoamericanos con mayor reconocimiento académico, ha planeado e integrado el grupo de ecología del Instituto de Biología, que cuenta con el primer proyecto de posgrado de la especialidad en el país. En 1992 fundó, con apoyo gubernamental, la Comisión Nacional para el Conocimiento y Uso de la Biodiversidad (Conabio), de la cual funge, de forma honoraria, como Coordinador Nacional por designación presidencial desde su inicio. Se desempeñó como rector de la Universidad Nacional Autónoma de México de 1989 a 1997.
+      .row.time-wrapper
+        .col-12
+          h4 HACE UNA HORA
+      .row.align-items-center.justify-content-center.footer-icons.text-center
+        .col-2
+          a(href="index.html")
+            i.fas.fa-home
+        .col-2
+          a(href="#")
+            i.fas.fa-search
+        .col-2
+          a(href="#")
+            i.far.fa-plus-square
+        .col-2
+          a(href="#")
+            i.far.fa-heart
+        .col-2
+          a(href="#")
+            i.far.fa-user
+    script(src="../../assets/lib/jquery-3.2.1.min.js")
+    script(src='../../assets/js/instagram.js')
