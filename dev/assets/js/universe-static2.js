@@ -45,4 +45,37 @@ $( document ).ready(function() {
 			count1 = 0;
 		}
 	}
+
+	function checkPass(count){
+		console.log(count);
+		if(count == 120){
+			$('#vid-modal').modal('show');
+			$('#vid-modal video').get(0).play()
+			setTimeout(function(){ $('#vid-modal').modal('hide'); count1 = 0;}, 20500);
+		}
+		if(count == 19){
+			$('#vid-modal2').modal('show');
+			$('#vid-modal2 video').get(0).play()
+			setTimeout(function(){ $('#vid-modal2').modal('hide'); count1 = 0;}, 20500);
+		}
+		if(count >= 121){
+			count1 = 0;
+		}
+	}
+
+	 $(document).keydown(function(event) {
+	 if (event.ctrlKey == true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109' || event.which == '187' || event.which == '189')) {
+		 event.preventDefault();
+	 }
+	 // 107 Num Key  +
+	 // 109 Num Key  -
+	 // 173 Min Key  hyphen/underscor Hey
+	 // 61 Plus key  +/= key
+	});
+
+ $(window).bind('mousewheel DOMMouseScroll', function(event) {
+	 if (event.ctrlKey == true) {
+		 event.preventDefault();
+	 }
+ });
 });

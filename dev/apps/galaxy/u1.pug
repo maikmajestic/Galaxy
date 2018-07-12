@@ -5,6 +5,7 @@ html
 		link(rel="stylesheet" type="text/css" href="../../assets/lib/fontawesome/css/fontawesome-all.min.css")
 		link(rel="stylesheet" type="text/css" href="../../assets/css/animate.css")
 		link(rel="stylesheet" type="text/css" href="../../assets/css/universe-static.css")
+		link(href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet")
 	body
 		.container-fluid.wrapper-universe#wide
 			video.video-bg(autoplay loop muted)
@@ -14,6 +15,11 @@ html
 					.object.m80(data-info="#m80-info", data-direction="up")
 						.image
 							img(src="../../assets/images/GALAXIAM8015FRAMES.gif")
+					.info-wrapper.info-wrapper2#m80-info
+						.info-card2
+							p.name-element Galaxia NGC 4278 o NGC3379
+							p.body-element Al encontrar el método Poveda, el astrofísico mexicano, no se detuvo ahí. En 1961 descubrió una relación matemática entre la masa de un sistema estelar libre de polvo y su luminosidad total, es decir que el cociente de la masa entre la luminosidad crece al incrementarse la masa del sistema. Esto significa que la eficiencia lumínica de un sistema estelar disminuye al crecer el número de estrellas que lo conforman. Esta relación contempla cúmulos globulares, o sea cientos de miles de estrellas, y hasta cúmulos de galaxias, que a su vez consisten en miles de galaxias constituidas por cientos de miles de millones de estrellas. Se entiende entonces, que el Método Poveda es válido para sistemas cuyas masas puede diferir en un factor de hasta en diez mil millones. Esto contribuye a entender teóricamente la diferencia entre la materia bariónica, es decir la constituida por leptones y bariones, o constituida por átomos y sus subpartículas, en otras palabras, materia ordinaria del universo, y la materia oscura que algunos creen se formó después del Big Bang.
+							.icon-close
 				.col.info-wrapper#h47-info
 					.info-card
 						p.name-element Herbig Haro – HH 39
@@ -33,7 +39,7 @@ html
 						.image
 							img(src="../../assets/images/haro44_15frames.gif")
 			.row.align-items-center.justify-content-center.pl-5
-				.col.info-wrapper#m80-info
+				.col.info-wrapper
 					.info-card
 						p.name-element Galaxia NGC 4278 o NGC3379
 						p.body-element Al encontrar el método Poveda, el astrofísico mexicano, no se detuvo ahí. En 1961 descubrió una relación matemática entre la masa de un sistema estelar libre de polvo y su luminosidad total, es decir que el cociente de la masa entre la luminosidad crece al incrementarse la masa del sistema. Esto significa que la eficiencia lumínica de un sistema estelar disminuye al crecer el número de estrellas que lo conforman. Esta relación contempla cúmulos globulares, o sea cientos de miles de estrellas, y hasta cúmulos de galaxias, que a su vez consisten en miles de galaxias constituidas por cientos de miles de millones de estrellas. Se entiende entonces, que el Método Poveda es válido para sistemas cuyas masas puede diferir en un factor de hasta en diez mil millones. Esto contribuye a entender teóricamente la diferencia entre la materia bariónica, es decir la constituida por leptones y bariones, o constituida por átomos y sus subpartículas, en otras palabras, materia ordinaria del universo, y la materia oscura que algunos creen se formó después del Big Bang.
@@ -59,6 +65,8 @@ html
 						p.name-element Galaxia Haro 22
 						p.body-element Las Galaxias Haro son sistemas con una gran cantidad de gas. La mayoría son galaxias enanas elípticas y enanas lenticulares.  Sus características espectrales son muy similares a las regiones de formación de estrellas, por lo que este tipo de galaxias suelen llamarse galaxias HII, es decir, con hidrógeno ionizado ya que el exceso de radiación azul y ultravioleta que presentan estas galaxias es producido por una importante población de estrellas jóvenes. Las investigaciones de Haro, ayudaron a clasificar las galaxias ya que descubrió que la morfología y los rasgos espectrales son dos elementos ligados íntimamente entre sí. Esto ayudó a descubrir que todas las galaxias tienen estrellas jóvenes y viejas, incluso las más azules. Esto sería de vital importancia para describir el proceso evolutivo de una galaxia, misterio que sigue intrigando a una gran cantidad de astrónomos.
 						i.far.fa-times-circle
+				.star
+					img(src="../../assets/images/estrella.png")
 			#vid-modal.modal.fade.animated.zoomIn(data-backdrop="true", tabindex='-1', role='dialog', aria-labelledby='vidModalLabel', aria-hidden='true')
 				.modal-dialog(role='document')
 					.modal-content

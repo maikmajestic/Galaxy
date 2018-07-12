@@ -217,9 +217,9 @@ $( document ).ready(function() {
 				$('.answers-result i:nth-child(3)').addClass('active');
 				$('.answers-result i:nth-child(3)').removeClass('fa-circle');
 				$('.answers-result i:nth-child(3)').addClass('fa-check-circle');
-				localStorage.setItem("answersQ", 1);
-				localStorage.setItem("successQ", 0);
-				localStorage.setItem("errorQ", 0);
+				localStorage.setItem("answersS", 1);
+				localStorage.setItem("successS", 0);
+				localStorage.setItem("errorS", 0);
 			}
 				$(this).addClass('active');
 				$(this).append('<h3 class="text-white">Respuesta correcta</h3>');
