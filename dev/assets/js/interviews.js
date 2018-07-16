@@ -7,8 +7,8 @@ $(document).ready(function() {
     window.history.back();
   });
   $('video').on('ended',function(){
-      window.history.back();
-    });
+      setTimeout(function(){ window.history.back(); }, 3000);
+  });
   var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
       sURLVariables = sPageURL.split('&'),
@@ -26,62 +26,62 @@ $(document).ready(function() {
   if (window.location.href.indexOf("questions.html") > -1) {
     //krauze
     if (window.location.href.indexOf("?a=ek") > -1) {
-	  	$('#id-author').text('Enrique Krauze');
-	  	var questions = ['Futuro de la democracia latinoamericana', 'Importancia de una institución como El Colegio Nacional', 'Mejor momento histórico de México en términos económicos, sociales y políticos', 'Particularidades de la democracia mexicana', 'Peligros que la población olvide su pasado', 'Régimen político'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=ek&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=ek&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-		if (window.location.href.indexOf("?a=dv") > -1) {
-	  	$('#id-author').text('Diego Valadés');
-	  	var questions = ['Importancia de una institución como El Colegio Nacional', 'Sobre el sistema presidencial', 'Sobre reformas o nueva constitución', 'La Constitución de 1857 como parteaguas de nuestra historia constitucional', 'Sobre la democracia cultural', 'Sobre Ley de voluntad anticipada su importancia'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=dv&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=dv&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-		if (window.location.href.indexOf("?a=fz") > -1) {
-	  	$('#id-author').text('Héctor Fix-Zamudio');
-	  	var questions = ['Sobre el juicio de amparo', 'Sobre el Ombudsman', 'El derecho procesal constitucional', 'Importancia de la enseñanza en derechos humanos', 'El deber de un Jurista', 'Importancia de una institución como El Colegio Nacional'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=fz&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=fz&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-		if (window.location.href.indexOf("?a=jg") > -1) {
-	  	$('#id-author').text('Javier Garciadiego');
-	  	var questions = ['Importancia de la historia', 'Importancia de conocer la revolución mexicana', 'Aportaciones de la Revolución al país actual', 'Importancia de libertad de expresión y derechos a la información en la construcción de un país', 'Papel de los jóvenes en las transformaciones del país', 'Importancia de una institución como El Colegio Nacional'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=jg&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=jg&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-		if (window.location.href.indexOf("?a=jc") > -1) {
-	  	$('#id-author').text('José Ramón Cossío');
-	  	var questions = ['El derecho constitucional', 'Los derechos sociales', 'Clasificación de los derechos', 'Relación entre el derecho y otras disciplinas', 'Promover cambios en la estructura y redacción de las sentencias', 'Maneras de contribuir o generar un mejor Estado', 'Deber de un juzgador mexicano', 'El valor de su labor como docente, investigador y servidor público', 'Importancia de una institución como El Colegio Nacional'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=jc&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=jc&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-		if (window.location.href.indexOf("?a=lv") > -1) {
-	  	$('#id-author').text('Luis Villoro');
-	  	var questions = ['Sobre la filosofía y por qué dedicarse a ella', 'Sobre la equidad', 'Sobre la posrevolución', 'Pendientes del proceso histórico mexicano', 'Relación entre la cultura local y la cultura universal'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=lv&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=lv&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-		if (window.location.href.indexOf("?a=mp") > -1) {
-	  	$('#id-author').text('Miguel León-Portilla');
-	  	var questions = ['Importancia de las lenguas indígenas', 'Preservación de las lenguas indígenas', 'Diferencia entre una lengua y un dialecto', 'Importancia de conocer la versión de un pueblo vencido', 'Herencia de la vida prehispánica', 'Importancia de una institución como El Colegio Nacional'];
-	  	var noquestions = questions.length;
-	  	for(var i=0;i<noquestions;i++){
-	   		$('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=mp&v='+i+'">'+questions[i]+'</a></div><div class="col-3 item-link-request"><a href="video.html?a=mp&v='+i+'"><i class="fas fa-play"></i></a></div></div></div>');
-	   	}
-		}
-	}
+      $('#id-author').text('Enrique Krauze');
+      var questions = ['Futuro de la democracia latinoamericana', 'El Colegio Nacional', 'Mejor momento histórico de México en términos económicos, sociales y políticos', 'Particularidades de la democracia mexicana', 'Peligros que la población olvide su pasado', 'Régimen político'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=ek&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=ek&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+    if (window.location.href.indexOf("?a=dv") > -1) {
+      $('#id-author').text('Diego Valadés');
+      var questions = ['El Colegio Nacional', 'Sobre el sistema presidencial', 'Sobre reformas o nueva constitución', 'La Constitución de 1857 como parteaguas de nuestra historia constitucional', 'Sobre la democracia cultural', 'Sobre Ley de voluntad anticipada y su importancia'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=dv&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=dv&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+    if (window.location.href.indexOf("?a=fz") > -1) {
+      $('#id-author').text('Héctor Fix-Zamudio');
+      var questions = ['Sobre el juicio de amparo', 'Sobre el Ombudsman', 'El derecho procesal constitucional', 'Importancia de la enseñanza en derechos humanos', 'El deber de un jurista', 'El Colegio Nacional'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=fz&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=fz&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+    if (window.location.href.indexOf("?a=jg") > -1) {
+      $('#id-author').text('Javier Garciadiego');
+      var questions = ['Importancia de la historia', 'Importancia de conocer la Revolución Mexicana', 'Aportaciones de la Revolución al país actual', 'Importancia de libertad de expresión y derechos a la información en la construcción de un país', 'Papel de los jóvenes en las transformaciones del país', 'El Colegio Nacional'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=jg&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=jg&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+    if (window.location.href.indexOf("?a=jc") > -1) {
+      $('#id-author').text('José Ramón Cossío');
+      var questions = ['El derecho constitucional', 'Los derechos sociales', 'Clasificación de los derechos', 'Relación entre el derecho y otras disciplinas', 'Promover cambios en la estructura y redacción de las sentencias', 'Maneras de contribuir o generar un mejor Estado', 'Deber de un juzgador mexicano', 'El valor de su labor como docente, investigador y servidor público', 'El Colegio Nacional'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=jc&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=jc&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+    if (window.location.href.indexOf("?a=lv") > -1) {
+      $('#id-author').text('Luis Villoro');
+      var questions = ['Sobre la filosofía y por qué dedicarse a ella', 'Sobre la equidad', 'Sobre la posrevolución', 'Pendientes del proceso histórico mexicano', 'Relación entre la cultura local y la cultura universal'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=lv&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=lv&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+    if (window.location.href.indexOf("?a=mp") > -1) {
+      $('#id-author').text('Miguel León-Portilla');
+      var questions = ['Importancia de las lenguas indígenas', 'Preservación de las lenguas indígenas', 'Diferencia entre una lengua y un dialecto', 'Importancia de conocer la versión de un pueblo vencido', 'Herencia de la vida prehispánica', 'El Colegio Nacional'];
+      var noquestions = questions.length;
+      for (var i = 0; i < noquestions; i++) {
+        $('#questions').append('<div class="col-8 item-member"><div class="row align-items-center"><div class="col-9 item-link"><a class="text-white text-center" href="video.html?a=mp&v=' + i + '">' + questions[i] + '</a></div><div class="col-3 item-link-request"><a href="video.html?a=mp&v=' + i + '"><i class="fas fa-play"></i></a></div></div></div>');
+      }
+    }
+  }
 
 	if (window.location.href.indexOf("video.html") > -1) {
 		if (window.location.href.indexOf("?a=ek") > -1) {

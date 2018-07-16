@@ -30,5 +30,8 @@ $(function() {
   });
   $(document).on("click", ".play", function() {
     $('video').trigger('play');
+    $('video').on('ended',function(){
+      setTimeout(function(){ $('.video-modal').modal('hide'); }, 3000);
+    });
   });
 });

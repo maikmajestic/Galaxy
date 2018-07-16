@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-	if(localStorage.successS && localStorage.errorS){
+	if(localStorage.successS && localStorage.errorS && localStorage.answersS){
 		if(localStorage.successS == 1){
 			$('.answers-result i').removeClass('active');
 			$('.answers-result i').first().removeClass('fa-circle');
@@ -48,9 +48,12 @@ $( document ).ready(function() {
 			localStorage.setItem("errorS", 0);
 			//$('#price').toggle('modal');
 		}
+		if(localStorage.answersS == 6){
+      localStorage.setItem("answersS", 0);
+    }
 	}
 	else{
-		localStorage.setItem("answersS", 0);
+		localStorage.setItem("answersS", -1);
 		localStorage.setItem("successS", 0);
 		localStorage.setItem("errorS", 0);
 	}
@@ -63,15 +66,20 @@ $( document ).ready(function() {
 			localStorage.setItem("successS", 2);
 		}
 		else if(successS == 3){
+			var an = parseInt(localStorage.getItem("answersS"));
+      var ax = an+1;
+      localStorage.setItem("answersS", ax); 
 			localStorage.setItem("successS", 3);
-			var code = Math.floor(Math.random() * 101);
+			var code = Math.floor(Math.random() * 2000);
 			$('.code-price').text('PLURAL-2018-'+code);
-			if(localStorage.answersS != 1){
+			if (localStorage.answersS == 0 || localStorage.answersS == 6) {
 				$('.price-wrapper').show();
 				$('#price').toggle('modal');
 				$('body').css('pointer-events', 'none');
-				setTimeout(function(){ localStorage.setItem("answersS", 0); }, 300000);
 			}
+			if (localStorage.answersS == 6) {
+        localStorage.setItem("answersS", 0); 
+      }
 		}
 	}
 
@@ -84,20 +92,29 @@ $( document ).ready(function() {
 		}
 		if(errorS == 3){
 			localStorage.setItem("errorS", 3);
-			if(localStorage.answersS != 1){
-				$('#error-modal').toggle('modal');
-				$('.error-wrapper').show();
-				$('body').css('pointer-events', 'none');
-			}
+			var ad = parseInt(localStorage.getItem("answersS"));
+      var ac = ad+1;
+      localStorage.setItem("answersS", ac);
+			$('#error-modal').toggle('modal');
+			$('.error-wrapper').show();
+			$('body').css('pointer-events', 'none');
+			if (localStorage.answersS == 6) {
+        localStorage.setItem("answersS", 0); 
+      }
 		}
 	}
 
 	$('.go-back').on('click', function(){
+		localStorage.setItem("successS", 0);
+    localStorage.setItem("errorS", 0);
 		window.location.href = "index.html";
 	});
 
-	$('.btn-accept').on('click', function(){
-		location.reload(true);
+	$('#exit2').on('click', function(){
+		localStorage.setItem("answersS", 0); 
+    localStorage.setItem("successS", 0);
+    localStorage.setItem("errorS", 0);
+		window.location.href = "index.html";
 	});
 
 	var semblant = ['Entre sus novelas destacan Al filo del agua, considerada la culminación de la novela de la Revolución; Ojerosa y pintada; Las tierras flacas, Las vueltas del tiempo  y La ladera dorada.  Se le sitúa entre los novelistas de la Revolución, pero se trata de un cultivador del estilo literario y un renovador de la estructura literaria.', 
@@ -180,7 +197,14 @@ $( document ).ready(function() {
 		opt = 3;
 	}
 	$('.btn-restart').on('click', function(){
-		location.reload(true);
+		if (localStorage.errorS >= 3 || localStorage.successS >= 3) {
+      localStorage.setItem("successS", 0);
+      localStorage.setItem("errorS", 0);
+      window.location.href = "index.html";
+    }
+    else{
+      location.reload(true);
+    }
 	});
 	$('.option-riddle').on('click', function(){
 		var option = $(this).data('option');
@@ -217,9 +241,9 @@ $( document ).ready(function() {
 				$('.answers-result i:nth-child(3)').addClass('active');
 				$('.answers-result i:nth-child(3)').removeClass('fa-circle');
 				$('.answers-result i:nth-child(3)').addClass('fa-check-circle');
-				localStorage.setItem("answersS", 1);
-				localStorage.setItem("successS", 0);
-				localStorage.setItem("errorS", 0);
+				//localStorage.setItem("answersS", 1);
+				//localStorage.setItem("successS", 0);
+				//localStorage.setItem("errorS", 0);
 			}
 				$(this).addClass('active');
 				$(this).append('<h3 class="text-white">Respuesta correcta</h3>');
@@ -249,9 +273,9 @@ $( document ).ready(function() {
 				$('.answers-result i:nth-child(5)').addClass('fa-times-circle');
 			}
 			else if(localStorage.errorS == 3){
-				localStorage.setItem("answersS", 0);
-				localStorage.setItem("successS", 0);
-				localStorage.setItem("errorS", 0);
+				//localStorage.setItem("answersS", 0);
+				//localStorage.setItem("successS", 0);
+				//localStorage.setItem("errorS", 0);
 				//$('#price').toggle('modal');
 			}
 			$(this).addClass('error');
